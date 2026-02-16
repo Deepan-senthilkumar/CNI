@@ -1,0 +1,412 @@
+/* Global Vars for this page */
+:root {
+    --primary-orange: #f57c00;
+    --secondary-blue: #1e293b;
+    --text-dark: #334155;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+}
+
+/* About Page Wrapper */
+.about-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* 1. Hero Section */
+.about-hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: url('../images/premium_hero_banner_1770813875811.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 80px;
+    /* Offset for fixed header */
+}
+
+/* Dark overlay for hero */
+.about-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    /* Dark blue tint */
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    color: var(--white);
+}
+
+/* 2. Intro Section (Split Layout) */
+.intro-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.intro-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: visible;
+    /* Allow decorative elements to spill out */
+}
+
+.intro-image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.intro-bg-accent {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 124, 0, 0.1);
+    /* Light orange accent */
+    border-radius: 16px;
+    z-index: 1;
+}
+
+/* 3. Why CNI Section */
+.values-section {
+    padding: 2rem 0 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.section-title-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.section-title-center h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-center h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 10px 15px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(245, 124, 0, 0.1), 0 10px 10px rgba(245, 124, 0, 0.05);
+    border-color: var(--primary-orange);
+}
+
+.value-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: rgba(226, 232, 240, 0.3);
+    /* Light gray background for icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-orange);
+    /* Or secondary blue depending on design preference */
+    font-size: 1.5rem;
+}
+
+/* Specific icon styles can be tweaked here */
+/* Alternate icon colors or styles if needed from the screenshot */
+.value-icon-wrapper i {
+    color: var(--secondary-blue);
+}
+
+.value-card:nth-child(2) .value-icon-wrapper i {
+    color: var(--secondary-blue);
+}
+
+.value-card:hover .value-icon-wrapper i {
+    color: var(--primary-orange) !important;
+    transition: color 0.3s ease;
+}
+
+
+/* 4. Benefits Section */
+.benefits-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Swap order for image on left, text on right if desired, current markup has header then list. 
+   Screenshot shows Benefits Header/Content on LEFT? No, screenshot is ambiguous, let's assume standardized split.
+   Actually, markup has header separate from list, let's adjust grid.
+*/
+.benefits-container {
+    /* Adjusting grid to match screenshot: Text Left, Image Right? Or Image Left, Text Right? 
+       Usually Benefits text is on one side. 
+       Let's stick to a clean split. 
+       Markup structure: .benefits-header (with image inside) AND .benefits-list 
+       Wait, markup puts an image INSIDE header div. That implies a column layout.
+       Let's fix layout via CSS grid on the container.
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.benefits-header {
+    /* This contains the title and the image in the current JSX structure */
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.benefits-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.benefits-image-wrapper {
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateX(5px);
+    background: #f1f5f9;
+}
+
+.benefit-icon {
+    min-width: 40px;
+    height: 40px;
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: var(--primary-orange);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* 5. Philosophy Section */
+.philosophy-section {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    padding: 0;
+    /* Full bleed */
+    overflow: hidden;
+}
+
+.philosophy-container {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    min-height: 400px;
+}
+
+.philosophy-left {
+    background: #0f172a;
+    /* Darker shade */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.philosophy-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.philosophy-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.philosophy-right {
+    background: var(--white);
+    /* Contrast card */
+    color: var(--text-dark);
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Create visual overlap or clean cut */
+}
+
+/* Design tweak: make it look like the screenshot with the white box overlapping or adjacent */
+.philosophy-content-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 700px;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.highlight-motto {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Animations using Intersection Observer class */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+
+    .intro-container,
+    .benefits-container,
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .philosophy-left,
+    .philosophy-right {
+        padding: 3rem 2rem;
+    }
+}

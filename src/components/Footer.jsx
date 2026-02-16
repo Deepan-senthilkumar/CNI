@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import footerLogo from '../assets/images/logo_cni.png';
 
 const Footer = () => {
@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className="container">
                     {/* Brand Column */}
                     <div className="footer-brand-v2">
-                        <a href="#home" style={{ display: 'block', marginBottom: '1.5rem' }}>
+                        <Link to="/" style={{ display: 'block', marginBottom: '1.5rem' }}>
                             <img src={footerLogo} alt="CNI Business Forum" style={{ maxWidth: '140px', height: 'auto' }} />
-                        </a>
+                        </Link>
                         <p>CNI Business Forum is India's most reputable business networking platform, connecting innovators and
                             leaders. We provide a wide range of services, including business development, networking events,
                             professional training, and collaborative growth modules.</p>
@@ -27,12 +27,12 @@ const Footer = () => {
                     <div className="footer-col-v2">
                         <h3>Quick Links</h3>
                         <ul className="footer-links-v2">
-                            <li><a href="#home"><i className="fas fa-angle-double-right"></i> Home</a></li>
-                            <li><a href="about.html"><i className="fas fa-angle-double-right"></i> About CNI</a></li>
-                            <li><a href="#Events"><i className="fas fa-angle-double-right"></i> Events</a></li>
-                            <li><a href="#contact"><i className="fas fa-angle-double-right"></i> Contact Us</a></li>
-                            <li><a href="#FAQ"><i className="fas fa-angle-double-right"></i> FAQ</a></li>
-                            <li><a href="#Become Member"><i className="fas fa-angle-double-right"></i> Become Member</a></li>
+                            <li><Link to="/"><i className="fas fa-angle-double-right"></i> Home</Link></li>
+                            <li><Link to="/about"><i className="fas fa-angle-double-right"></i> About CNI</Link></li>
+                            <li><Link to="/events"><i className="fas fa-angle-double-right"></i> Events</Link></li>
+                            <li><Link to="/membership"><i className="fas fa-angle-double-right"></i> Membership</Link></li>
+                            <li><Link to="/contact"><i className="fas fa-angle-double-right"></i> Contact Us</Link></li>
+                            <li><Link to="/faq"><i className="fas fa-angle-double-right"></i> FAQ</Link></li>
                         </ul>
                     </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
                     <div className="footer-col-v2">
                         <h3>Member Links</h3>
                         <ul className="footer-links-v2">
-                            <li><a href="#meeting"><i className="fas fa-angle-double-right"></i> Weekly Meeting</a></li>
+                            <li><Link to="/weekly-meeting"><i className="fas fa-angle-double-right"></i> Weekly Meeting</Link></li>
                             <li><a href="#CNI leaders"><i className="fas fa-angle-double-right"></i> CNI Leaders</a></li>
                             <li><a href="#CNI chapters"><i className="fas fa-angle-double-right"></i> CNI Chapters</a></li>
                             <li><a href="#CNI foundation"><i className="fas fa-angle-double-right"></i> CNI Foundation</a></li>

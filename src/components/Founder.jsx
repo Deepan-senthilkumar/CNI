@@ -10,7 +10,7 @@ const Founder = () => {
                     <div className="founder-image-decor"></div>
                     <div className="founder-image-card">
                         {/* Using placeholder as original image was missing */}
-                        <img src="https://placehold.co/400x500?text=Mr.E.+Udayakumar" alt="Mr. E. Udayakumar" />
+                        <img src="/founder_2.jpg" alt="Mr. E. Udayakumar" />
                     </div>
                     <div className="founder-image-decor-2"></div>
                 </div>

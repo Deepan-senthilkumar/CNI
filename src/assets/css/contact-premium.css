@@ -1,0 +1,234 @@
+/* Global Vars for Contact Page */
+:root {
+    --contact-primary: #1e3a8a;
+    /* Deep Royal Blue */
+    --contact-secondary: #eb7125;
+    /* CNI Orange */
+    --contact-dark: #111827;
+    --contact-light: #f9fafb;
+    --contact-white: #ffffff;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+.contact-page {
+    font-family: var(--font-body);
+    color: var(--contact-dark);
+    background-color: var(--contact-white);
+    margin-top: 80px;
+}
+
+/* 1. Hero Section */
+.contact-hero {
+    position: relative;
+    padding: 6rem 0;
+    background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.contact-hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 1;
+    /* Ensure full brightness */
+    color: #ffffff;
+}
+
+/* 2. Locations Grid */
+/* 2. Locations Grid - Premium Redesign */
+/* 2. Locations Grid - Style V3 */
+.locations-section {
+    padding: 6rem 0;
+    background: #ffffff;
+    /* Clean white bg */
+}
+
+.section-header-contact {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header-contact h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--contact-primary);
+    margin-bottom: 0.5rem;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.location-card {
+    background: #f8fafc;
+    /* Very light slate bg */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--contact-secondary);
+    /* Orange accent strip */
+    transition: width 0.3s ease;
+}
+
+.location-card:hover {
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+/* 
+.location-card:hover::before {
+    width: 100%; 
+    opacity: 0.05;
+} 
+*/
+
+.location-card h3 {
+    font-size: 1.4rem;
+    color: var(--contact-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 0;
+    background: transparent;
+    display: block;
+}
+
+/* Remove previous icon pseudo element if it exists in previous step */
+.location-card h3::before {
+    display: none;
+}
+
+.location-card-content {
+    padding: 0;
+}
+
+.location-card p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    padding: 0;
+    position: relative;
+    padding-left: 0;
+}
+
+.location-card strong {
+    color: var(--contact-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    padding: 0;
+}
+
+/* 3. General Info Section */
+.general-info-section {
+    padding: 5rem 0;
+    background: var(--contact-white);
+}
+
+.general-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.info-box {
+    text-align: center;
+    padding: 2.5rem;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    border-color: var(--contact-secondary);
+    box-shadow: 0 10px 30px rgba(235, 113, 37, 0.1);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(235, 113, 37, 0.1);
+    color: var(--contact-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--contact-dark);
+}
+
+.info-box p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.info-box a {
+    color: var(--contact-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+.animate-contact {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .general-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

@@ -59,7 +59,7 @@ const Testimonials = () => {
     }, [testimonials.length]);
 
     return (
-        <section id="testimonials" className="section-padding" style={{ background: 'var(--bg-color)', overflow: 'hidden' }}>
+        <section id="testimonials" className="section-padding" style={{ background: 'var(--bg-color)', overflow: 'hidden', padding: '44px 0px' }}>
             <div className="container">
                 <div className="testimonial-section-header animate-on-scroll">
                     <span className="client-script">Client</span>
