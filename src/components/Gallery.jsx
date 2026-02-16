@@ -2,12 +2,12 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <section id="gallery" className="section-padding" style={{ background: 'var(--surface-color)' }}>
+        <section id="gallery" className="section-padding" style={{ background: 'var(--surface-color)', marginBottom: '80px' }}>
             <div className="container">
                 <div className="section-header animate-on-scroll">
                     <span className="section-subtitle">Visual Showcase</span>
                     <h2>Networking Excellence</h2>
-                    <p style={{ color: 'var(--text-muted)' }}>A glimpse into our vibrant chapter meetings and industry events.</p>
+                    <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>A glimpse into our vibrant chapter meetings and industry events.</p>
                 </div>
                 <div className="gallery-grid-premium animate-on-scroll">
                     <div className="gallery-item-premium">
