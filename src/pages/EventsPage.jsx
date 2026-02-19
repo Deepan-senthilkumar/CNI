@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../assets/css/styles.css';
 import '../assets/css/events-premium.css';
 
@@ -11,6 +11,11 @@ import eventImg3 from '../assets/images/premium_construction_banner_177081024438
 import cniLogo from '../assets/images/logog.png';
 
 const EventsPage = () => {
+    const navigate = useNavigate();
+    const [eventBanner, setEventBanner] = React.useState('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    const [eventBannerTitle, setEventBannerTitle] = React.useState('Chennai Central Chapter');
+    const [isRegisterModalOpen, setIsRegisterModalOpen] = React.useState(false);
+    const [selectedEventForReg, setSelectedEventForReg] = React.useState('');
 
     useEffect(() => {
         // Scroll Animation Observer
@@ -42,89 +47,98 @@ const EventsPage = () => {
         <div className="events-page-arch">
 
 
-            {/* 2. Date & Venue Banner */}
-            <section className="arch-date-banner animate-on-scroll">
-                <div className="container">
-                    <div className="date-banner-content">
-                        <h2>Successful Chennai's Construction Elite</h2>
-                        <div className="date-time-box">
-                            <h3>Tuesday, Aug 26, 2025</h3>
-                            <p>9.30 AM - 6.00 PM</p>
-                        </div>
-                        <div className="stats-highlight">
-                            <span>40 Architects</span> | <span>20 Premium Stalls</span>
-                        </div>
-                        <div className="venue-pill">
-                            <i className="fas fa-map-marker-alt"></i> The Residency Towers, T. Nagar, Chennai
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* New Upcoming Events Section */}
             <section className="upcoming-events-section animate-on-scroll">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Networking Events</h2>
+
+
+                    {/* Interactive Event Banner */}
+                    <div className="hq-banner animate-on-scroll" style={{ marginBottom: '2rem' }}>
+                        <div className="hq-banner-bg" style={{ backgroundImage: `url(${eventBanner})`, filter: 'brightness(0.6)' }}></div>
+                        <div className="hq-content">
+                            <h2 className="hq-title">{eventBannerTitle}</h2>
+                            <p className="hq-subtitle">Featured Highlights</p>
+                        </div>
                     </div>
+
                     <div className="event-grid">
-                        {/* Event 1 */}
-                        <div className="event-card">
+                        <div className="event-card"
+                            onMouseEnter={() => {
+                                setEventBanner('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                                setEventBannerTitle('Chennai Central Chapter: Founders Meetup');
+                            }}
+                            onClick={() => navigate('/event-detail/founders-meetup')}>
                             <div className="event-image">
-                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Networking Event" />
-                                <div className="event-date-tag">
-                                    <span className="day">15</span>
-                                    <span className="month">Mar</span>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Networking Event" />
                             </div>
                             <div className="event-content">
-                                <span className="event-category">Business Growth</span>
                                 <h3>Chennai Central Chapter: Founders Meetup</h3>
                                 <div className="event-meta">
                                     <span><i className="far fa-clock"></i> 07:30 AM</span>
                                     <span><i className="fas fa-map-marker-alt"></i> Hotel Savera</span>
                                 </div>
-                                <button className="cta-button">Register Now</button>
+                                <button className="cta-button">Read More</button>
                             </div>
                         </div>
 
                         {/* Event 2 */}
-                        <div className="event-card">
+                        <div className="event-card"
+                            onMouseEnter={() => {
+                                setEventBanner('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                                setEventBannerTitle('Coimbatore Innovation Expo 2024');
+                            }}
+                            onClick={() => navigate('/event-detail/coimbatore-expo')}>
                             <div className="event-image">
                                 <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Expo" />
-                                <div className="event-date-tag">
-                                    <span className="day">22</span>
-                                    <span className="month">Mar</span>
-                                </div>
                             </div>
                             <div className="event-content">
-                                <span className="event-category">Innovation</span>
                                 <h3>Coimbatore Innovation Expo 2024</h3>
                                 <div className="event-meta">
                                     <span><i className="far fa-clock"></i> 10:00 AM</span>
                                     <span><i className="fas fa-map-marker-alt"></i> CODISSIA Complex</span>
                                 </div>
-                                <button className="cta-button">Register Now</button>
+                                <button className="cta-button">Read More</button>
                             </div>
                         </div>
 
                         {/* Event 3 */}
-                        <div className="event-card">
+                        <div className="event-card"
+                            onMouseEnter={() => {
+                                setEventBanner('https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                                setEventBannerTitle('Successful Chennai\'s Construction Elite');
+                            }}
+                            onClick={() => navigate('/event-detail/leadership-summit')}>
                             <div className="event-image">
                                 <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Leadership Summit" />
-                                <div className="event-date-tag">
-                                    <span className="day">05</span>
-                                    <span className="month">Apr</span>
-                                </div>
                             </div>
                             <div className="event-content">
-                                <span className="event-category">Leadership</span>
-                                <h3>Annual Construction Leadership Summit</h3>
+                                <h3>Successful Chennai's Construction Elite</h3>
                                 <div className="event-meta">
-                                    <span><i className="far fa-clock"></i> 09:00 AM</span>
-                                    <span><i className="fas fa-map-marker-alt"></i> The Residency</span>
+                                    <span><i className="far fa-clock"></i> 09:30 AM</span>
+                                    <span><i className="fas fa-map-marker-alt"></i> The Residency Towers</span>
                                 </div>
-                                <button className="cta-button">Register Now</button>
+                                <button className="cta-button">Read More</button>
+                            </div>
+                        </div>
+
+                        {/* Event 4 */}
+                        <div className="event-card"
+                            onMouseEnter={() => {
+                                setEventBanner('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                                setEventBannerTitle('Chennai Galaxy: Business Expansion Expo');
+                            }}
+                            onClick={() => navigate('/event-detail/business-meet')}>
+                            <div className="event-image">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business Meet" />
+                            </div>
+                            <div className="event-content">
+                                <h3>Chennai Galaxy: Business Expansion Expo</h3>
+                                <div className="event-meta">
+                                    <span><i className="far fa-clock"></i> 08:30 AM</span>
+                                    <span><i className="fas fa-map-marker-alt"></i> ITC Grand Chola</span>
+                                </div>
+                                <button className="cta-button">Read More</button>
                             </div>
                         </div>
                     </div>
@@ -217,6 +231,100 @@ const EventsPage = () => {
                     </div>
                 </div>
             </section>
+            {/* 8. Registration Modal */}
+            {isRegisterModalOpen && (
+                <div className="leader-modal-overlay" onClick={() => setIsRegisterModalOpen(false)}>
+                    <div className="leader-modal-content registration-modal visitor-form-modal" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close-btn" onClick={() => setIsRegisterModalOpen(false)}>
+                            <i className="fas fa-times"></i>
+                        </button>
+
+                        <div className="visitor-form-header">
+                            <div className="v-header-left">
+                                <h1 className="visitor-title">VISITOR'S INTEREST FORM</h1>
+                            </div>
+                            <div className="v-header-right">
+                                <img src={cniLogo} alt="CNI Logo" className="v-logo" />
+                            </div>
+                        </div>
+
+                        <form className="visitor-interest-form" onSubmit={(e) => e.preventDefault()}>
+                            <div className="v-form-row">
+                                <label>Name</label>
+                                <span className="v-colon">:</span>
+                                <input type="text" placeholder="................................................................................................................" required />
+                            </div>
+                            <div className="v-form-row">
+                                <label>Business Category</label>
+                                <span className="v-colon">:</span>
+                                <input type="text" placeholder="................................................................................................................" required />
+                            </div>
+                            <div className="v-form-row">
+                                <label>Name of the Company</label>
+                                <span className="v-colon">:</span>
+                                <input type="text" placeholder="................................................................................................................" required />
+                            </div>
+                            <div className="v-form-row align-start">
+                                <label>Address</label>
+                                <span className="v-colon">:</span>
+                                <div className="address-lines">
+                                    <input type="text" placeholder="................................................................................................................" required />
+                                    <input type="text" placeholder="................................................................................................................" />
+                                </div>
+                            </div>
+                            <div className="v-form-row">
+                                <label>Mobile No</label>
+                                <span className="v-colon">:</span>
+                                <input type="tel" placeholder="................................................................................................................" required />
+                            </div>
+                            <div className="v-form-row">
+                                <label>Email Id</label>
+                                <span className="v-colon">:</span>
+                                <input type="email" placeholder="................................................................................................................" required />
+                            </div>
+                            <div className="v-form-row">
+                                <label>Invited by</label>
+                                <span className="v-colon">:</span>
+                                <input type="text" placeholder="................................................................................................................" required />
+                            </div>
+
+                            <div className="visitor-survey-container">
+                                <div className="survey-box">
+                                    <p className="survey-question">Are you Interested to become a Member of CNI ?</p>
+                                    <div className="survey-options">
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="membership" /> <span className="box"></span> Yes
+                                        </label>
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="membership" /> <span className="box"></span> May be
+                                        </label>
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="membership" /> <span className="box"></span> No
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div className="survey-box">
+                                    <p className="survey-question">How was your Experience in this Meeting ?</p>
+                                    <div className="survey-options">
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="experience" /> <span className="box"></span> Fair
+                                        </label>
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="experience" /> <span className="box"></span> Good
+                                        </label>
+                                        <label className="checkbox-item">
+                                            <input type="radio" name="experience" /> <span className="box"></span> Excellent
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" className="cta-button confirm-btn">Confirm Registration</button>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

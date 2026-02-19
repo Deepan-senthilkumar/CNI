@@ -11,16 +11,12 @@ const Contact = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.animate-contact').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
 
@@ -28,103 +24,152 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className="contact-page">
+        <div className="contact-page-v2">
 
-            {/* 1. Hero Section */}
-            <section className="contact-hero">
+            {/* 1. Premium Hero Section */}
+            <section className="contact-hero-v2">
                 <div className="container">
-                    <h1 className="animate-contact">Get in Touch</h1>
-                    <p className="animate-contact">We're here to help you connect with the construction industry's best. Reach out to your local chapter or our headquarters.</p>
+                    <h1 className="animate-contact">Connect with CNI</h1>
+                    <p className="animate-contact">Have a question or want to join India's premium construction network? Our team is ready to assist you.</p>
                 </div>
             </section>
 
-            {/* 2. Locations Grid */}
-            <section className="locations-section">
+            {/* 2. Main Contact Grid (Split Form & Info) */}
+            <section className="contact-main-section">
                 <div className="container">
-                    <div className="section-header-contact animate-contact">
-                        <h2>Our Offices</h2>
-                        <p>Find us in key cities across the region.</p>
-                    </div>
+                    <div className="contact-split-grid">
 
-                    <div className="locations-grid">
-                        {/* Chennai */}
-                        <div className="location-card animate-contact">
-                            <h3>Chennai</h3>
-                            <p><strong>CNI-Construction Network of India</strong></p>
-                            <p>Prompt Tower Plot No : 324,<br />Ram Nagar South 12th Extension,<br />Off Radial Road, Near Kamakshi Hospital,<br />Pallikaranai, Chennai - 600 100.</p>
+                        {/* Left Side: Premium Form */}
+                        <div className="contact-form-wrapper animate-contact">
+                            <div className="form-card-v2">
+                                <h2>Send us a Message</h2>
+                                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                                <form className="premium-form" onSubmit={(e) => e.preventDefault()}>
+                                    <div className="form-group-v2">
+                                        <input type="text" placeholder="Your Name" required />
+                                        <i className="fas fa-user"></i>
+                                    </div>
+                                    <div className="form-group-v2">
+                                        <input type="email" placeholder="Email Address" required />
+                                        <i className="fas fa-envelope"></i>
+                                    </div>
+                                    <div className="form-group-v2 full-width">
+                                        <input type="tel" placeholder="Phone Number" />
+                                        <i className="fas fa-phone"></i>
+                                    </div>
+
+                                    <div className="form-group-v2 full-width">
+                                        <textarea placeholder="Tell us more about your requirement..." required></textarea>
+                                        <i className="fas fa-comment-alt"></i>
+                                    </div>
+                                    <button type="submit" className="submit-btn-v2">
+                                        Send Message <i className="fas fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
 
+                        {/* Right Side: Headquarters Info */}
+                        <div className="contact-info-wrapper animate-contact">
+                            <div className="hq-detail-card">
+                                <div className="hq-header">
+                                    <span className="badge-v2">Headquarters</span>
+                                    <h3>Chennai Office</h3>
+                                </div>
+
+                                <div className="hq-body">
+                                    <div className="hq-info-row">
+                                        <div className="row-icon"><i className="fas fa-map-marked-alt"></i></div>
+                                        <div className="row-text">
+                                            <h4>Main Office</h4>
+                                            <p>Prompt Tower Plot No : 324, Ram Nagar South 12th Extension, Pallikaranai, Chennai - 600 100.</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="hq-info-row">
+                                        <div className="row-icon"><i className="fas fa-phone-volume"></i></div>
+                                        <div className="row-text">
+                                            <h4>Technical Support</h4>
+                                            <p><a href="tel:+919362050255">+91 93620 50255</a></p>
+                                            <p><a href="tel:+919543668090">+91 95436 68090</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div className="hq-info-row">
+                                        <div className="row-icon"><i className="fas fa-envelope-open-text"></i></div>
+                                        <div className="row-text">
+                                            <h4>Official Mail</h4>
+                                            <p><a href="mailto:admin@cnibusinessforum.com">admin@cnibusinessforum.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="social-connect-box">
+                                    <h4>Follow Our Growth</h4>
+                                    <div className="social-circles">
+                                        <a href="#" className="sc-icon"><i className="fab fa-facebook-f"></i></a>
+                                        <a href="#" className="sc-icon"><i className="fab fa-instagram"></i></a>
+                                        <a href="#" className="sc-icon"><i className="fab fa-linkedin-in"></i></a>
+                                        <a href="#" className="sc-icon"><i className="fab fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. Regional Presence (Redesigned Locations) */}
+            <section className="regional-presence-section">
+                <div className="container">
+                    <div className="presence-header animate-contact">
+                        <h2>Regional Presence</h2>
+                        <div className="title-underline"></div>
+                        <p>Bridging gaps across major cities in Tamil Nadu</p>
+                    </div>
+
+                    <div className="regions-grid-v2">
                         {/* Coimbatore */}
-                        <div className="location-card animate-contact">
+                        <div className="region-card-v2 animate-contact">
+                            <div className="city-img-placeholder">
+                                <i className="fas fa-city"></i>
+                            </div>
                             <h3>Coimbatore</h3>
-                            <p>54 D, 1st Floor,<br />Jayavarthanavelu Nagar,<br />Masakkalipalayam Road, Peelamedu,<br />Coimbatore - 641004.</p>
+                            <p>54 D, 1st Floor, Jayavarthanavelu Nagar, Masakkalipalayam Road, Peelamedu, CBE - 641004.</p>
+                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Madurai */}
-                        <div className="location-card animate-contact">
+                        <div className="region-card-v2 animate-contact">
+                            <div className="city-img-placeholder">
+                                <i className="fas fa-landmark"></i>
+                            </div>
                             <h3>Madurai</h3>
-                            <p># 279, 1st, East Main Road,<br />Anna Nagar, Madurai - 625020.</p>
+                            <p># 279, 1st, East Main Road, Anna Nagar, Madurai - 625020.</p>
+                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Trichy */}
-                        <div className="location-card animate-contact">
+                        <div className="region-card-v2 animate-contact">
+                            <div className="city-img-placeholder">
+                                <i className="fas fa-gopuram"></i>
+                            </div>
                             <h3>Trichy</h3>
-                            <p>No.135, Ponnagar,<br />Near Adjacent Swarna Vinayagar Temple,<br />Trichy - 620001.</p>
+                            <p>No.135, Ponnagar, Near Adjacent Swarna Vinayagar Temple, Trichy - 620001.</p>
+                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Erode */}
-                        <div className="location-card animate-contact">
+                        <div className="region-card-v2 animate-contact">
+                            <div className="city-img-placeholder">
+                                <i className="fas fa-industry"></i>
+                            </div>
                             <h3>Erode</h3>
-                            <p>Room No 204,205, Second Floor,<br />No.102/3, Chinna Sengodampalayam,<br />Perundurai Main Road, Nachimuthu Complex,<br />Above Union Bank of India,<br />Veerappampalayam Pirivu,<br />Erode-638012.</p>
+                            <p>Nachimuthu Complex, Second Floor, Perundurai Main Road, Erode - 638012.</p>
+                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
-
-                        {/* Expansion Placeholder */}
-                        <div className="location-card animate-contact" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                            <div className="expansion-placeholder">
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Growing Stronger</h3>
-                                <p style={{ padding: '0 2rem' }}>We are expanding our footprint across India. More chapters coming soon!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 3. General Info Section */}
-            <section className="general-info-section">
-                <div className="container">
-                    <div className="general-info-grid">
-
-                        {/* Email */}
-                        <div className="info-box animate-contact">
-                            <div className="info-icon">
-                                <i className="fas fa-envelope"></i>
-                            </div>
-                            <h3>Email Us</h3>
-                            <p>General Inquiries:</p>
-                            <a href="mailto:admin@cnibusinessforum.com">admin@cnibusinessforum.com</a>
-                        </div>
-
-                        {/* Phone */}
-                        <div className="info-box animate-contact">
-                            <div className="info-icon">
-                                <i className="fas fa-phone-alt"></i>
-                            </div>
-                            <h3>Call Us</h3>
-                            <p><a href="tel:+919362050255">+91 93620 50255</a></p>
-                            <p><a href="tel:+919543668090">+91 95436 68090</a></p>
-                            <p><a href="tel:+919543668095">+91 95436 68095</a></p>
-                        </div>
-
-                        {/* Hours */}
-                        <div className="info-box animate-contact">
-                            <div className="info-icon">
-                                <i className="fas fa-clock"></i>
-                            </div>
-                            <h3>Business Hours</h3>
-                            <p>Mon to Sat — 10:00 AM to 6:00 PM</p>
-                            <p>Sunday — Closed</p>
-                        </div>
-
                     </div>
                 </div>
             </section>

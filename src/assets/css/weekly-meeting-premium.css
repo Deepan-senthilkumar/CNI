@@ -195,8 +195,9 @@
 }
 
 /* 5. Awards Section */
-.wm-awards {
-    padding: 6rem 0;
+.wm-awards,
+.wm-awards-section {
+    padding: 6rem 0 10rem;
     background: var(--wm-white);
 }
 

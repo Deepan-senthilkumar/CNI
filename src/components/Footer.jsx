@@ -29,8 +29,8 @@ const Footer = () => {
                         <ul className="footer-links-v2">
                             <li><Link to="/"><i className="fas fa-angle-double-right"></i> Home</Link></li>
                             <li><Link to="/about"><i className="fas fa-angle-double-right"></i> About CNI</Link></li>
-                            <li><Link to="/events"><i className="fas fa-angle-double-right"></i> Events</Link></li>
                             <li><Link to="/membership"><i className="fas fa-angle-double-right"></i> Membership</Link></li>
+                            <li><Link to="/events" className="footer-links-item"><i className="fas fa-angle-double-right"></i> Events</Link></li>
                             <li><Link to="/contact"><i className="fas fa-angle-double-right"></i> Contact Us</Link></li>
                             <li><Link to="/faq"><i className="fas fa-angle-double-right"></i> FAQ</Link></li>
                         </ul>
@@ -41,11 +41,11 @@ const Footer = () => {
                         <h3>Member Links</h3>
                         <ul className="footer-links-v2">
                             <li><Link to="/weekly-meeting"><i className="fas fa-angle-double-right"></i> Weekly Meeting</Link></li>
-                            <li><a href="#CNI leaders"><i className="fas fa-angle-double-right"></i> CNI Leaders</a></li>
-                            <li><a href="#CNI chapters"><i className="fas fa-angle-double-right"></i> CNI Chapters</a></li>
-                            <li><a href="#CNI foundation"><i className="fas fa-angle-double-right"></i> CNI Foundation</a></li>
-                            <li><a href="#franchise"><i className="fas fa-angle-double-right"></i> Franchise</a></li>
-                            <li><a href="#CNI policies"><i className="fas fa-angle-double-right"></i> CNI Policies</a></li>
+                            <li><Link to="/cni-leaders"><i className="fas fa-angle-double-right"></i> CNI Leaders</Link></li>
+                            <li><Link to="/chapters"><i className="fas fa-angle-double-right"></i> CNI Chapters</Link></li>
+                            <li><a href="https://www.dot-consulting.org/articles/foundations-of-modern-higher-education.html?psystem=PW&domain=cnifoundation.com&oref=https%3A%2F%2Fwww.cnibusinessforum.com%2F" target="_blank" rel="noopener noreferrer"><i className="fas fa-angle-double-right"></i> CNI Foundation</a></li>
+                            <li><Link to="/franchise"><i className="fas fa-angle-double-right"></i> Franchise</Link></li>
+                            <li><Link to="/policies"><i className="fas fa-angle-double-right"></i> CNI Policies</Link></li>
                         </ul>
                     </div>
 

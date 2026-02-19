@@ -36,54 +36,14 @@ const Membership = () => {
                 <div className="container">
                     <div className="mem-hero-content animate-mem">
                         <h1 className="mem-headline">Join the Elite Construction Network</h1>
-                        <p className="mem-subheadline">
-                            Unlock distinct advantages tailored for industry leaders. Connect, Collaborate, and Conquer with Construction Network India.
-                        </p>
-                        <div className="mem-cta-group">
-                            <button className="btn-primary-mem">Become a Member</button>
-                            <button className="btn-secondary-mem">View Benefits</button>
-                        </div>
+
                     </div>
                 </div>
             </section>
 
 
 
-            {/* 3. Benefits Section */}
-            <section className="mem-benefits-section">
-                <div className="container">
-                    <div className="section-title-mem animate-mem">
-                        <h2>Membership Enquiry</h2>
-                        <p>Interested in joining the elite? Fill out the form below and our team will get back to you.</p>
-                    </div>
 
-                    <div className="mem-form-container animate-mem">
-                        <form className="mem-form">
-                            <div className="form-group">
-                                <label htmlFor="name">Full Name</label>
-                                <input type="text" id="name" className="form-input" placeholder="John Doe" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="company">Company Name</label>
-                                <input type="text" id="company" className="form-input" placeholder="Your Construction Company" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="email">Email Address</label>
-                                <input type="email" id="email" className="form-input" placeholder="john@example.com" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="phone">Phone Number</label>
-                                <input type="tel" id="phone" className="form-input" placeholder="+91 98765 43210" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="message">Message / Queries</label>
-                                <textarea id="message" className="form-textarea" placeholder="Tell us about your business goals..."></textarea>
-                            </div>
-                            <button type="button" className="btn-submit">Submit Enquiry</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
 
             {/* 4. Join Steps Section */}
             <section className="mem-steps-section animate-mem">
@@ -113,15 +73,111 @@ const Membership = () => {
                 </div>
             </section>
 
-            {/* 5. CTA Section */}
-            <section className="mem-cta-section animate-mem">
+
+
+            {/* 6. Create Member Form Section */}
+            <section id="member-registration" className="create-member-section animate-mem">
                 <div className="container">
-                    <h2>Ready to Build the Future?</h2>
-                    <p>Join thousands of architects, engineers, and builders who are redefining the industry.</p>
-                    <button className="btn-primary-mem" style={{ background: 'white', color: '#1e3a8a' }}>Apply for Membership</button>
+
+
+                    <div className="member-form-card">
+                        <form className="member-application-form" onSubmit={(e) => e.preventDefault()}>
+                            {/* Basic Information */}
+                            <div className="form-section">
+                                <h2 className="form-section-title">Basic Information</h2>
+
+                                {/* Data Fields Column */}
+                                <div className="fields-col">
+                                    <div className="form-row">
+                                        <div className="input-box">
+                                            <label>Full Name <span>*</span></label>
+                                            <input type="text" placeholder="Enter Full Name" required />
+                                        </div>
+                                        <div className="input-box">
+                                            <label>Email Address <span>*</span></label>
+                                            <input type="email" placeholder="Enter Email Address" required />
+                                        </div>
+                                        <div className="input-box">
+                                            <label>Phone Number <span>*</span></label>
+                                            <input type="tel" placeholder="Enter Phone Number" required />
+                                        </div>
+                                    </div>
+                                    <div className="form-row">
+                                        <div className="input-box">
+                                            <label>Company Name <span>*</span></label>
+                                            <input type="text" placeholder="Enter Company Name" required />
+                                        </div>
+                                        <div className="input-box">
+                                            <label>Date of Birth</label>
+                                            <input type="text" placeholder="DD/MM/YYYY" />
+                                        </div>
+                                        <div className="input-box">
+                                            <label>Position</label>
+                                            <input type="text" placeholder="Enter Position" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="form-row full-width-row">
+                                    <div className="input-box">
+                                        <label>Business Category</label>
+                                        <input type="text" placeholder="Enter Category" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>Referred By</label>
+                                        <input type="text" placeholder="Enter Referrer Name" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>Anniversary</label>
+                                        <input type="text" placeholder="DD/MM/YYYY" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Office Address */}
+                            <div className="form-section">
+                                <div className="form-row">
+                                    <div className="input-box">
+                                        <label>Door No (New No)</label>
+                                        <input type="text" placeholder="Enter Door No" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>Street</label>
+                                        <input type="text" placeholder="Enter Street Name" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>Area</label>
+                                        <input type="text" placeholder="Enter Area" />
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-box">
+                                        <label>City</label>
+                                        <input type="text" placeholder="Enter City" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>State</label>
+                                        <input type="text" placeholder="Enter State" />
+                                    </div>
+                                    <div className="input-box">
+                                        <label>Pincode</label>
+                                        <input type="text" placeholder="6-digit pincode" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Form Footer */}
+                            <div className="member-form-footer">
+                                <label className="update-checkbox">
+                                    <input type="checkbox" />
+                                    <span>I wish to receive updates via SMS and E-Mail</span>
+                                </label>
+                                <button type="submit" className="btn-primary-mem submit-form">Create Member Account</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
-
         </div>
     );
 };

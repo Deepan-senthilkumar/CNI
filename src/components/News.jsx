@@ -11,18 +11,18 @@ import velloreImg from '../assets/images/velore.png';
 const News = () => {
     const [mainContent, setMainContent] = useState({
         img: mainBannerImg,
-        title: 'Chennai, India',
+        title: 'CHENNAI, INDIA',
         subtitle: 'Global Headquarters'
     });
     const [fade, setFade] = useState(false);
 
     const locations = [
-        { img: covaiImg, name: 'Coimbatore' },
-        { img: maduraiImg, name: 'Madurai' },
-        { img: erodeImg, name: 'Erode' },
-        { img: chennaiImg, name: 'Chennai' },
-        { img: thajaiImg, name: 'Thanjai' },
-        { img: velloreImg, name: 'Vellore' }
+        { img: covaiImg, name: 'COIMBATORE' },
+        { img: maduraiImg, name: 'MADURAI' },
+        { img: erodeImg, name: 'ERODE' },
+        { img: chennaiImg, name: 'CHENNAI' },
+        { img: thajaiImg, name: 'THANJAI' },
+        { img: velloreImg, name: 'VELLORE' }
     ];
 
     const handleLocationClick = (loc) => {
@@ -30,7 +30,7 @@ const News = () => {
         setTimeout(() => {
             setMainContent({
                 img: loc.img,
-                title: `${loc.name}, India`,
+                title: `${loc.name}, INDIA`,
                 subtitle: 'Regional Office'
             });
             setFade(false);

@@ -19,9 +19,8 @@
     font-family: var(--font-body);
     color: var(--mem-dark);
     background-color: var(--mem-white);
-    margin-top: 80px;
+    margin-top: 0px;
     /* Header spacing */
-    overflow-x: hidden;
 }
 
 /* 1. Membership Hero */
@@ -379,7 +378,184 @@
     box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
 }
 
-/* Mobile Responsive */
+/* Create Member Form Section */
+.create-member-section {
+    padding: 0 0 6rem;
+    background-color: #f7f9fc;
+}
+
+.form-main-title {
+    font-size: 2.2rem;
+    color: #0c2b5e;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.member-form-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+}
+
+.form-section {
+    margin-bottom: 3rem;
+}
+
+.form-section-title {
+    font-size: 1.6rem;
+    color: #0c2b5e;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.basic-info-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.profile-upload-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-placeholder {
+    width: 200px;
+    height: 200px;
+    background: #f0f4f8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-placeholder i {
+    font-size: 5rem;
+    color: #cbd5e1;
+}
+
+.btn-choose {
+    background: #fff;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 0.6rem 2.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-choose:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row.full-width-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input-box label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.input-box label span {
+    color: #ef4444;
+}
+
+.input-box input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-box input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.member-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.update-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.update-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+.submit-form {
+    margin: 0 !important;
+    border-radius: 8px !important;
+}
+
+@media (max-width: 1024px) {
+    .basic-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form-row,
+    .three-col {
+        grid-template-columns: 1fr;
+    }
+
+    .member-form-footer {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile Responsive Utility */
 @media (max-width: 768px) {
     .mem-headline {
         font-size: 2.5rem;

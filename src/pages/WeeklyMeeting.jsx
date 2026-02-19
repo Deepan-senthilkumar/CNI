@@ -97,122 +97,181 @@ const WeeklyMeeting = () => {
                 </div>
             </section>
 
-            {/* Meeting Protocols */}
+            {/* Meeting Fundamentals (Expanded) */}
             <section className="wm-protocol-section">
                 <div className="container">
                     <div className="section-title animate-wm">
-                        <h2>Meeting Fundamentals</h2>
-                        <p>Structured guidelines ensuring every minute generates value for our members.</p>
+                        <h2>Meeting Procedure & Fundamentals</h2>
+                        <p>Detailed protocols ensuring professional standards and operational excellence.</p>
                     </div>
 
                     <div className="wm-grid">
                         <div className="wm-info-box animate-wm">
-                            <i className="fas fa-calendar-alt"></i>
-                            <h3>Regularity</h3>
-                            <p>Meetings are organized weekly on weekdays or weekends, as determined by the Chapter CEO and Core Committee.</p>
+                            <i className="fas fa-calendar-check"></i>
+                            <h3>Weekly Meeting</h3>
+                            <p>CNI Meetings will be organized during weekdays or weekends as preferred by the Chapter CEO and Core Committee Team, in every week.</p>
                         </div>
 
                         <div className="wm-info-box animate-wm">
                             <i className="fas fa-hotel"></i>
-                            <h3>Premium Venues</h3>
-                            <p>Held in banquet facilities of Star Rated Hotels. Costs are shared transparently among members and visitors.</p>
+                            <h3>Meeting Venue</h3>
+                            <p>Chapter Meetings will be organized in Banquet facilities of Star Rated Hotels. All expenses are shared among Members and Visitors. Includes Referral Meets, Review Meets, and Training.</p>
                         </div>
 
                         <div className="wm-info-box animate-wm">
-                            <i className="fas fa-users"></i>
-                            <h3>Active Networking</h3>
-                            <p>Every meeting is preceded by a 30-minute high-energy networking session to foster personal connections.</p>
+                            <i className="fas fa-network-wired"></i>
+                            <h3>Member's Networking</h3>
+                            <p>Time is the quintessence. A structured 30-minute networking session precedes every meeting to foster deep professional connections.</p>
                         </div>
 
                         <div className="wm-info-box animate-wm">
                             <i className="fas fa-envelope-open-text"></i>
-                            <h3>Invitation Protocol</h3>
-                            <p>Circulated 5 days in advance via WhatsApp and Email, including details of the venue, time, and prominent Chief Guests.</p>
+                            <h3>Invitations</h3>
+                            <p>Circulated 5 days prior via WhatsApp/Email. Features Chapter Logo, Core Team names, Chief Guest photo/topic, and clear venue details.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-flag"></i>
+                            <h3>Chapter Banner</h3>
+                            <p>The prominent Chapter Banner must be displayed visibly behind the Head Table at every meeting.</p>
                         </div>
 
                         <div className="wm-info-box animate-wm">
                             <i className="fas fa-chair"></i>
-                            <h3>Professional Setup</h3>
-                            <p>Conference or U-Type seating arrangements with designated Head Table and prominent Chapter Banners.</p>
+                            <h3>Head Table & Seating</h3>
+                            <p>Protocol-wise decoration for CEO, Secretary, Chairman, and MDC. Seating follows strictly Professional Conference or U-Type arrangements.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-user-check"></i>
+                            <h3>Front Desk</h3>
+                            <p>Critical for visitor fee collection, database management, and attendance tracking by the Associate Membership Chairman.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-bell"></i>
+                            <h3>Time Bell</h3>
+                            <p>Maintained by the Secretary to ensure strict adherence to time slots for self-introductions and presentations.</p>
                         </div>
 
                         <div className="wm-info-box animate-wm">
                             <i className="fas fa-user-clock"></i>
-                            <h3>Perfect Attendance</h3>
-                            <p>Mandatory registration 30 minutes prior to the start time. Presence is recorded physically at the Front Desk.</p>
+                            <h3>Attendance</h3>
+                            <p>Registration opens 30 minutes prior to the start. Physical recording at the Front Desk is obligatory for entry.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-mobile-alt"></i>
+                            <h3>DND Protocol</h3>
+                            <p>Strict "Do-Not-Disturb" protocol. All participants must turn mobile phones to silent mode or switch them off during the session.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-microphone"></i>
+                            <h3>Self Introduction</h3>
+                            <p>Max 45 seconds per Member on a First-come-First-served basis, strictly tracked by the attendance time log.</p>
+                        </div>
+
+                        <div className="wm-info-box animate-wm">
+                            <i className="fas fa-user-tie"></i>
+                            <h3>Master of Ceremony</h3>
+                            <p>The Secretary presides over the meeting procedure, acting as the Master of Ceremony for every session.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Run Order */}
+
+            {/* Run Order Section */}
             <section className="wm-run-order">
                 <div className="container">
                     <div className="section-title animate-wm">
                         <h2>Meeting Run Order</h2>
-                        <p>A rigorous timeline designed for maximum efficiency.</p>
+                        <p>A rigorous timeline designed for maximum efficiency and professional impact.</p>
                     </div>
 
                     <div className="timeline-container animate-wm">
                         <div className="timeline-item">
-                            <h4>Procedures & Prayers</h4>
-                            <p>Starts with a Silent Prayer and the ceremonial garlanding of the Meeting Chairman by the Chapter CEO.</p>
+                            <h4>Prayer & Garland</h4>
+                            <p>Every CNI Meet starts with a Silent Prayer followed by the Chapter CEO wearing the garland to the Meeting Chairman.</p>
                         </div>
                         <div className="timeline-item">
                             <h4>Welcome & Pledge</h4>
-                            <p>Welcome Note by the Secretary followed by the CNI Pledge led by the Chapter CEO.</p>
+                            <p>Welcome Note by the Secretary (max 2 mins), followed by the CNI Pledge led by the Chapter CEO (1 min).</p>
                         </div>
                         <div className="timeline-item">
-                            <h4>Inductions</h4>
-                            <p>New member introductions and official badge pinning ceremony.</p>
+                            <h4>CNI Briefing</h4>
+                            <p>A concise 1-minute explanation of CNI objectives and vision delivered by the Chapter CEO.</p>
                         </div>
                         <div className="timeline-item">
-                            <h4>Keynote Session</h4>
-                            <p>External Speaker presentations (10-15 minutes) on industry innovations or professional growth.</p>
+                            <h4>New Member Inductions</h4>
+                            <p>Introduction of new members (2 mins each) and induction ceremony with the CNI Pledge and badge pinning by the CEO or MDC.</p>
                         </div>
                         <div className="timeline-item">
-                            <h4>Member & Visitor Pitch</h4>
-                            <p>Fast-paced 45-second self-introductions for members and 30-second slots for visitors.</p>
+                            <h4>External Speaker</h4>
+                            <p>Introduction of the guest speaker by the Meeting Chairman, with a permitted session of 10 to 15 minutes.</p>
                         </div>
                         <div className="timeline-item">
-                            <h4>Referrals & Business</h4>
-                            <p>A dedicated 30-minute session for sharing referrals, generating ASKs, and gratitude notes.</p>
+                            <h4>Member Presentations</h4>
+                            <p>Focused member presentation sessions with a maximum permitted slot of 45 seconds per Member.</p>
                         </div>
                         <div className="timeline-item">
-                            <h4>Closing Protocols</h4>
-                            <p>Recognitions, Vote of Thanks, and Birthday/Anniversary celebrations.</p>
+                            <h4>Visitor Introductions</h4>
+                            <p>Introducing up to 10 visitors from construction industry segments, permitted with 30-second slots each.</p>
+                        </div>
+                        <div className="timeline-item">
+                            <h4>Referrals & ASK Session</h4>
+                            <p>A high-impact 30-minute session for sharing referrals, generating ASKs, and offering gratitude notes.</p>
+                        </div>
+                        <div className="timeline-item">
+                            <h4>Weekly Recognition</h4>
+                            <p>10-15 minute session honoring (1) Max Referrals, (2) Max Visitors, (3) Max 1-to-1s, (4) One-time Presence, and (5) Best Self Introduction.</p>
+                        </div>
+                        <div className="timeline-item">
+                            <h4>Closing & Celebration</h4>
+                            <p>Formal Vote of Thanks by the Secretary and Birthday & Anniversary celebrations by the Membership Development Team.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Awards Section */}
-            <section className="wm-awards">
+            {/* Monthly Awards Section */}
+            <section className="wm-awards-section">
                 <div className="container">
                     <div className="section-title animate-wm">
-                        <h2>Recognition & Excellence</h2>
-                        <p>Celebrating the contributors who drive our community forward.</p>
+                        <h2>Monthly Awards</h2>
+                        <p>Honored during the second meeting of every month to recognize outstanding contributions.</p>
                     </div>
 
                     <div className="awards-grid">
                         <div className="award-card animate-wm">
-                            <i className="fas fa-medal"></i>
-                            <h3>Weekly Awards</h3>
-                            <p>Top Referrals, Max Visitors, Best Intro, and One-to-One Champions are honored every week.</p>
-                        </div>
-                        <div className="award-card animate-wm">
-                            <i className="fas fa-trophy"></i>
+                            <div className="award-icon">
+                                <i className="fas fa-star"></i>
+                            </div>
                             <h3>Star of the Chapter</h3>
-                            <p>Awarded monthly to the highest Giver within the ecosystem.</p>
+                            <p>Honored to the highest giver of the previous month for their exceptional dedication to chapter growth.</p>
                         </div>
+
                         <div className="award-card animate-wm">
-                            <i className="fas fa-crown"></i>
-                            <h3>Captain & Ambassador</h3>
-                            <p>Recognizing the Best Meeting Chairman and Top Visitor Invitee of the month.</p>
+                            <div className="award-icon">
+                                <i className="fas fa-crown"></i>
+                            </div>
+                            <h3>Captain of the Chapter</h3>
+                            <p>Awarded to the best meeting chairman of the last month for maintaining impeccable meeting protocols.</p>
+                        </div>
+
+                        <div className="award-card animate-wm">
+                            <div className="award-icon">
+                                <i className="fas fa-medal"></i>
+                            </div>
+                            <h3>Ambassador of the Chapter</h3>
+                            <p>Presented to the member with the highest number of visitor invitees in the preceding month.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+
 
 
         </div>

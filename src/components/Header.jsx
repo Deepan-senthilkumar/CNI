@@ -36,16 +36,20 @@ const Header = () => {
                     />
                     <label htmlFor="menu-checkbox" className="menu-toggle"></label>
                     <ul className="nav-links">
-                        <li><a href="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Home</a></li>
+                        <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Home</Link></li>
                         <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>About CNI</Link></li>
+                        <li><Link to="/chapters" className={location.pathname === '/chapters' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>CNI Chapters</Link></li>
+                        <li><Link to="/cni-leaders" className={location.pathname === '/cni-leaders' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>CNI Leaders</Link></li>
                         <li><Link to="/events" className={location.pathname === '/events' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Events</Link></li>
-                        <li><Link to="/membership" className={location.pathname === '/membership' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Membership</Link></li>
-                        <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
-                        <li>
-                            <a href="#login" style={{ textDecoration: 'none' }}>
-                                <button type="button" className="cta-button" style={{ padding: '0.5rem 1.5rem' }}>LOG IN</button>
-                            </a>
+                        <li className="dropdown">
+                            <Link to="#" className="dropdown-toggle">Our Groups</Link>
+                            <ul className="dropdown-menu">
+                                <li><a href="https://prompttradefairs.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>TRADE FAIRS</a></li>
+                                <li><a href="https://www.buildersline.in/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>PUBLICATION</a></li>
+                                <li><a href="https://www.promptdigimart.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>DIGI MART</a></li>
+                            </ul>
                         </li>
+                        <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
                     </ul>
                 </nav>
             </div>
