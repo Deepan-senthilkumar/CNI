@@ -24,8 +24,7 @@ const Advantage = () => {
                         </div>
                         <div className="advantage-content">
                             <h3>Quality Referrals</h3>
-                            <p>Access a stream of verified business leads and high-quality referrals specifically curated
-                                for the construction sector.</p>
+                            <p>Generate Valuable Sales referrals that Works for you which are Incessant, Engaging and Accurate</p>
                         </div>
                     </div>
 
@@ -36,8 +35,7 @@ const Advantage = () => {
                         </div>
                         <div className="advantage-content">
                             <h3>Strategic Networking</h3>
-                            <p>Connect with top-tier consultants and industry leaders through our structured weekly
-                                meetings.</p>
+                            <p>Reach your Product to the maximum among the network with direct promotions</p>
                         </div>
                     </div>
 
@@ -48,8 +46,7 @@ const Advantage = () => {
                         </div>
                         <div className="advantage-content">
                             <h3>Exponential Growth</h3>
-                            <p>Scale your business operations by leveraging the collective wisdom of a multi-chapter
-                                network.</p>
+                            <p>Develop & Establish long-lasting Relationship with well-matched Business Professionals</p>
                         </div>
                     </div>
 
@@ -60,8 +57,7 @@ const Advantage = () => {
                         </div>
                         <div className="advantage-content">
                             <h3>Industry Credibility</h3>
-                            <p>Enhance your brand's reputation as a CNI member. Our strict code of ethics ensures
-                                quality.</p>
+                            <p>Nurture your Professional and Business Skills through direct interactions</p>
                         </div>
                     </div>
                 </div>

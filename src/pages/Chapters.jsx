@@ -44,13 +44,41 @@ const ChapterCounter = ({ target }) => {
     return <div ref={counterRef}>{count}</div>;
 };
 
+const chapterData = [
+    "Chennai Aspire", "Chennai Crown", "Chennai Vibrant", "Karaikudi Chapter", "Trichy Dynamic", "Trichy Galaxy",
+    "Thanjavur Chapter", "Madurai Chapter", "Madurai Galaxy", "Madurai Prestige",
+    "Dindigal Chapter", "Sivakasi Chapter", "Coimbatore Chapter", "Coimbatore Galaxy",
+    "Coimbatore Capital", "Avinashi Chapter", "Vellore", "Erode Chapter", "Coimbatore Crown",
+    "Erode Galaxy", "Pudukkottai Chapter", "Madurai Sunrise", "Chennai Ultimate",
+    "Chennai Royal Kings", "Chennai Champions",
+    "Chennai Phoenix", "Chennai Green City", "Salem Chapter", "Pondicherry Chapter",
+    "Chennai Inspire", "Chennai Bench Mark", "Chennai Galaxy", "Chennai Sunrise",
+    "Chennai Prestige", "Chennai Royal", "Tambaram Chapter"
+];
+
 const Chapters = () => {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
+    const [filteredChapters, setFilteredChapters] = useState(chapterData);
+
+    const handleSearch = () => {
+        const results = chapterData.filter(chapter =>
+            chapter.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredChapters(results);
+    };
+
+    // Trigger search on Enter key
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') handleSearch();
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
+    }, []);
 
+    // Re-run observer whenever filtered list changes
+    useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -61,37 +89,31 @@ const Chapters = () => {
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.animate-roster').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
+        const elements = document.querySelectorAll('.animate-roster');
+        elements.forEach(el => {
+            // Only hide if not already visible to prevent flashing
+            if (!el.classList.contains('visible')) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+            }
             observer.observe(el);
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [filteredChapters]); // Fix: Re-observe when list updates
+
+    useEffect(() => {
+        const results = chapterData.filter(chapter =>
+            chapter.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredChapters(results);
+    }, [searchTerm]);
 
     const getChapterImage = (name) => {
-        const lowerName = name.toLowerCase();
-        if (lowerName.includes('chennai') || lowerName.includes('tambaram')) return chennaiImg;
-        if (lowerName.includes('madurai')) return maduraiImg;
-        if (lowerName.includes('trichy')) return trichyImg;
-        if (lowerName.includes('coimbatore') || lowerName.includes('avinashi')) return coimbatoreImg;
-        if (lowerName.includes('erode')) return erodeImg;
-        if (lowerName.includes('vellore')) return velloreImg;
-        return defaultChapterImg;
+        return maduraiImg;
     };
 
-    const chapterData = [
-        "Chennai Aspire", "Chennai Crown", "Chennai Vibrant", "Karaikudi Chapter", "Trichy Dynamic", "Trichy Galaxy",
-        "Thanjavur Chapter", "Madurai Chapter", "Madurai Galaxy", "Madurai Prestige",
-        "Dindigal Chapter", "Sivakasi Chapter", "Coimbatore Chapter", "Coimbatore Galaxy",
-        "Coimbatore Capital", "Avinashi Chapter", "Vellore", "Erode Chapter", "Coimbatore Crown",
-        "Erode Galaxy", "Pudukkottai Chapter", "Madurai Sunrise", "Chennai Ultimate",
-        "Chennai Royal Kings", "Chennai Champions",
-        "Chennai Phoenix", "Chennai Green City", "Salem Chapter", "Pondicherry Chapter",
-        "Chennai Inspire", "Chennai Bench Mark", "Chennai Galaxy", "Chennai Sunrise",
-        "Chennai Prestige", "Chennai Royal", "Tambaram Chapter"
-    ];
+
 
     return (
         <div className="chapters-page" style={{ paddingBottom: '100px' }}>
@@ -183,6 +205,7 @@ const Chapters = () => {
                                     placeholder="Search Chapter..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
+                                    onKeyPress={handleKeyPress}
                                     style={{
                                         width: '100%',
                                         padding: '0.8rem 1.2rem 0.8rem 3.5rem',
@@ -195,43 +218,46 @@ const Chapters = () => {
                                     className="chapter-search-input"
                                 />
                             </div>
-                            <button style={{
-                                background: 'var(--leader-secondary)',
-                                color: '#fff',
-                                border: 'none',
-                                borderRadius: '100px',
-                                padding: '0 1.5rem',
-                                fontWeight: '700',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease',
-                                fontSize: '0.9rem'
-                            }}>
+                            <button
+                                onClick={handleSearch}
+                                style={{
+                                    background: 'var(--leader-secondary)',
+                                    color: '#fff',
+                                    border: 'none',
+                                    borderRadius: '100px',
+                                    padding: '0 1.5rem',
+                                    fontWeight: '700',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    fontSize: '0.9rem'
+                                }}>
                                 Search
                             </button>
                         </div>
                     </div>
 
                     <div className="chapters-grid">
-                        {chapterData
-                            .filter(chapter => chapter.toLowerCase().includes(searchTerm.toLowerCase()))
-                            .length > 0 ? (
-                            chapterData
-                                .filter(chapter => chapter.toLowerCase().includes(searchTerm.toLowerCase()))
-                                .map((chapter, index) => {
-                                    const chapterId = chapter.toLowerCase().replace(/ /g, '-');
-                                    return (
-                                        <div key={index} className="chapter-card-premium animate-roster"
-                                            onClick={() => navigate(`/chapter-detail/${chapterId}`)}>
-                                            <div className="chapter-overlay-new">
-                                                <div className="chapter-details">
-                                                    <h3>{chapter}</h3>
-                                                    <p>Construction Network India</p>
-                                                    <span className="read-more-link">Read More</span>
-                                                </div>
+                        {filteredChapters.length > 0 ? (
+                            filteredChapters.map((chapter, index) => {
+                                const chapterId = chapter.toLowerCase().replace(/ /g, '-');
+                                return (
+                                    <div key={chapterId} className="chapter-card-premium animate-roster"
+                                        onClick={() => navigate(`/chapter-detail/${chapterId}`)}
+                                        style={{
+                                            backgroundImage: `url(${getChapterImage(chapter)})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center'
+                                        }}>
+                                        <div className="chapter-overlay-new">
+                                            <div className="chapter-details">
+                                                <h3>{chapter}</h3>
+                                                <p>Construction Network India</p>
+                                                <span className="read-more-link">Read More</span>
                                             </div>
                                         </div>
-                                    );
-                                })
+                                    </div>
+                                );
+                            })
                         ) : (
                             <div style={{
                                 gridColumn: '1 / -1',

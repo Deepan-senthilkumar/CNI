@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import eventImg2 from '../assets/images/premium_banner_image_1770810202351.png';
 import eventImg3 from '../assets/images/premium_about_cni_1770813891769.png';
 import eventImg4 from '../assets/images/Madurai.png';
 
 const Events = () => {
+    const navigate = useNavigate();
+
     return (
         <section id="events">
             <div className="container">
@@ -12,7 +15,7 @@ const Events = () => {
                 </div>
                 <div className="event-grid">
                     {/* Event 1 */}
-                    <div className="event-card animate-on-scroll">
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                                 alt="Chennai Central Chapter: Founders Meetup" />
@@ -28,7 +31,7 @@ const Events = () => {
                     </div>
 
                     {/* Event 2 */}
-                    <div className="event-card animate-on-scroll">
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg2} alt="Construction Expo" />
                         </div>
@@ -43,7 +46,7 @@ const Events = () => {
                     </div>
 
                     {/* Event 3 */}
-                    <div className="event-card animate-on-scroll">
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg3} alt="Leadership Seminar" />
                         </div>
@@ -58,7 +61,7 @@ const Events = () => {
                     </div>
 
                     {/* Event 4 */}
-                    <div className="event-card animate-on-scroll">
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg4} alt="Madurai Infrastructure Expo" />
                         </div>

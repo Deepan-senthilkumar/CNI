@@ -1,69 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/css/cni-leaders-premium.css';
 
 const CNILeaders = () => {
-    const scrollRefs = {
-        exec: useRef(null),
-        regional: useRef(null),
-        ceo: useRef(null),
-        secretary: useRef(null),
-        trainer: useRef(null)
-    };
-
-    const pausedSections = useRef({
-        exec: false,
-        regional: false,
-        ceo: false,
-        secretary: false,
-        trainer: false
-    });
-
-    useEffect(() => {
-        let animationFrameId;
-        const scroll = () => {
-            Object.keys(scrollRefs).forEach((key) => {
-                const container = scrollRefs[key].current;
-                if (container && !pausedSections.current[key]) {
-                    container.scrollLeft += 0.8; // Smooth speed
-                    if (container.scrollLeft >= container.scrollWidth / 2) {
-                        container.scrollLeft = 0;
-                    }
-                }
-            });
-            animationFrameId = requestAnimationFrame(scroll);
-        };
-        animationFrameId = requestAnimationFrame(scroll);
-        return () => cancelAnimationFrame(animationFrameId);
-    }, []);
-
-    const handleManualScroll = (section, direction) => {
-        const container = scrollRefs[section].current;
-        if (container) {
-            // Pause auto-scroll briefly to allow smooth manual scroll
-            pausedSections.current[section] = true;
-
-            // Clear any existing resume timer
-            if (container.resumeTimer) clearTimeout(container.resumeTimer);
-
-            // Resume auto-scroll after 2.5 seconds of inactivity
-            container.resumeTimer = setTimeout(() => {
-                pausedSections.current[section] = false;
-            }, 2500);
-
-            const scrollAmount = direction === 'left' ? -400 : 400;
-
-            // Fix: If at extreme start, wrap to middle to allow left scroll
-            if (direction === 'left' && container.scrollLeft <= 10) {
-                container.scrollLeft = container.scrollWidth / 2;
-            }
-            // Fix: If at extreme end of duplication, wrap to start
-            if (direction === 'right' && container.scrollLeft >= (container.scrollWidth / 2) - 10) {
-                container.scrollLeft = 0;
-            }
-
-            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-    };
     const chaptersData = {
         "Karaikudi Chapter": {
             tenure: "2024 (III)",
@@ -596,7 +534,6 @@ const CNILeaders = () => {
     };
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -714,74 +651,87 @@ const CNILeaders = () => {
                         <span>Executive Directors</span>
                     </div>
 
-                    <div
-                        className="auto-scroll-container animate-roster"
-                        ref={scrollRefs.exec}
-                        onMouseEnter={() => pausedSections.current.exec = true}
-                        onMouseLeave={() => pausedSections.current.exec = false}
-                    >
-                        <div className="scroll-track">
-                            {[1, 2].map((loop) => (
-                                <React.Fragment key={loop}>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. K.K.V. Arul</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">PONDICHERRY REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. N.S. Amirtha Raj</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">TAMIL NADU REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. O.K. Muthukrishnan</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">CHENNAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name Here</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">Zone TBA</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name Here</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">Zone TBA</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name Here</h3>
-                                        <p className="v-role">Executive Director</p>
-                                        <p className="v-zone">Zone TBA</p>
-                                    </div>
-                                </React.Fragment>
-                            ))}
+                    <div className="visual-grid-v2 animate-roster">
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. K.K.V. Arul</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">PONDICHERRY REGION</p>
                         </div>
-                    </div>
-                    <div className="scroll-controls animate-roster">
-                        <button className="scroll-btn" onClick={() => handleManualScroll('exec', 'left')}>
-                            <i className="fas fa-arrow-left"></i>
-                        </button>
-                        <button className="scroll-btn" onClick={() => handleManualScroll('exec', 'right')}>
-                            <i className="fas fa-arrow-right"></i>
-                        </button>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. N.S. Amirtha Raj</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">TAMIL NADU REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. O.K. Muthukrishnan</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">CHENNAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-tie" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Add Name Here</h3>
+                            <p className="v-role">Executive Director</p>
+                            <p className="v-zone">Zone TBA</p>
+                        </div>
                     </div>
 
                     {/* Regional Directors */}
@@ -789,397 +739,169 @@ const CNILeaders = () => {
                         <span>Regional Directors</span>
                     </div>
 
-                    <div
-                        className="auto-scroll-container animate-roster"
-                        ref={scrollRefs.regional}
-                        onMouseEnter={() => pausedSections.current.regional = true}
-                        onMouseLeave={() => pausedSections.current.regional = false}
-                    >
-                        <div className="scroll-track">
-                            {[1, 2].map((loop) => (
-                                <React.Fragment key={loop}>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. S. Siddharth Gandhi</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">CHENNAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. D. Vinoth</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">CHENNAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. S. Thamin Ansari</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">CHENNAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. Vijayakumar C</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">TRICHY REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. P. Chandrasekar</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">TRICHY REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Er. S. Syed Munaaf</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">MADURAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">S. K. Gobidoss</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">MADURAI REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. P. Pugalenthi</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">THANJAVUR REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Vellaisamy Damodharan</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">DINDIGUL REGION</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">R. Prakalathan</h3>
-                                        <p className="v-role">Regional Director</p>
-                                        <p className="v-zone">COIMBATORE REGION</p>
-                                    </div>
-                                </React.Fragment>
-                            ))}
+                    <div className="visual-grid-v2 animate-roster">
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. S. Siddharth Gandhi</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">CHENNAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. D. Vinoth</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">CHENNAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. S. Thamin Ansari</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">CHENNAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. Vijayakumar C</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">TRICHY REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. P. Chandrasekar</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">TRICHY REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Er. S. Syed Munaaf</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">MADURAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">S. K. Gobidoss</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">MADURAI REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. P. Pugalenthi</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">THANJAVUR REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Vellaisamy Damodharan</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">DINDIGUL REGION</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-user-shield" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">R. Prakalathan</h3>
+                            <p className="v-role">Regional Director</p>
+                            <p className="v-zone">COIMBATORE REGION</p>
                         </div>
                     </div>
-                    <div className="scroll-controls animate-roster">
-                        <button className="scroll-btn" onClick={() => handleManualScroll('regional', 'left')}>
-                            <i className="fas fa-arrow-left"></i>
-                        </button>
-                        <button className="scroll-btn" onClick={() => handleManualScroll('regional', 'right')}>
-                            <i className="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
 
-                    {/* CEO Section */}
-                    <div className="role-divider animate-roster">
-                        <span>CEO</span>
-                    </div>
 
-                    <div
-                        className="auto-scroll-container animate-roster"
-                        ref={scrollRefs.ceo}
-                        onMouseEnter={() => pausedSections.current.ceo = true}
-                        onMouseLeave={() => pausedSections.current.ceo = false}
-                    >
-                        <div className="scroll-track">
-                            {[1, 2].map((loop) => (
-                                <React.Fragment key={loop}>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Er. B. Karthikeyan</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Vasanthi Sam</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Gobi Ramanathan</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">M. Ullasakrishnan</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">K. Narendran</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Ms. Divya Theresa</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-user-graduate" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">CEO</p>
-                                    </div>
-                                </React.Fragment>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="scroll-controls animate-roster">
-                        <button className="scroll-btn" onClick={() => handleManualScroll('ceo', 'left')}>
-                            <i className="fas fa-arrow-left"></i>
-                        </button>
-                        <button className="scroll-btn" onClick={() => handleManualScroll('ceo', 'right')}>
-                            <i className="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
 
-                    {/* Secretary Section */}
-                    <div className="role-divider animate-roster">
-                        <span>Secretary</span>
-                    </div>
 
-                    <div
-                        className="auto-scroll-container animate-roster"
-                        ref={scrollRefs.secretary}
-                        onMouseEnter={() => pausedSections.current.secretary = true}
-                        onMouseLeave={() => pausedSections.current.secretary = false}
-                    >
-                        <div className="scroll-track">
-                            {[1, 2].map((loop) => (
-                                <React.Fragment key={loop}>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">D. Shivakumar</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">AR.M. Dharanidharan</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. S. Saravanan</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img" style={{ background: '#f0f4f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <i className="fas fa-file-signature" style={{ fontSize: '2.5rem', color: '#cbd5e1' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Add Name</h3>
-                                        <p className="v-role">Secretary</p>
-                                    </div>
-                                </React.Fragment>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="scroll-controls animate-roster">
-                        <button className="scroll-btn" onClick={() => handleManualScroll('secretary', 'left')}>
-                            <i className="fas fa-arrow-left"></i>
-                        </button>
-                        <button className="scroll-btn" onClick={() => handleManualScroll('secretary', 'right')}>
-                            <i className="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
 
                     {/* Trainer Section */}
                     <div className="role-divider animate-roster">
                         <span>Trainer</span>
                     </div>
 
-                    <div
-                        className="auto-scroll-container animate-roster"
-                        ref={scrollRefs.trainer}
-                        onMouseEnter={() => pausedSections.current.trainer = true}
-                        onMouseLeave={() => pausedSections.current.trainer = false}
-                    >
-                        <div className="scroll-track">
-                            {[1, 2].map((loop) => (
-                                <React.Fragment key={loop}>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">V Muthu</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. S. Chandru</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. V. Ashok</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. Kesavarajan.R</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. Vinoth</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. G. Kumaravel</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. V Jeevaraj</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. K. Kirubakaran</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. Sukumar K</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                    <div className="leader-card-v2" style={{ width: '250px', flexShrink: 0 }}>
-                                        <div className="v-profile-img">
-                                            <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
-                                        </div>
-                                        <h3 className="v-name">Mr. N. Deepak</h3>
-                                        <p className="v-role">Chapter Trainer</p>
-                                    </div>
-                                </React.Fragment>
-                            ))}
+                    <div className="visual-grid-v2 animate-roster">
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">V Muthu</h3>
+                            <p className="v-role">Chapter Trainer</p>
                         </div>
-                    </div>
-                    <div className="scroll-controls animate-roster">
-                        <button className="scroll-btn" onClick={() => handleManualScroll('trainer', 'left')}>
-                            <i className="fas fa-arrow-left"></i>
-                        </button>
-                        <button className="scroll-btn" onClick={() => handleManualScroll('trainer', 'right')}>
-                            <i className="fas fa-arrow-right"></i>
-                        </button>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. S. Chandru</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. V. Ashok</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. Kesavarajan.R</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. Vinoth</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. G. Kumaravel</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. V Jeevaraj</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. K. Kirubakaran</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. Sukumar K</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
+                        <div className="leader-card-v2">
+                            <div className="v-profile-img">
+                                <i className="fas fa-chalkboard-teacher" style={{ fontSize: '2.5rem' }}></i>
+                            </div>
+                            <h3 className="v-name">Mr. N. Deepak</h3>
+                            <p className="v-role">Chapter Trainer</p>
+                        </div>
                     </div>
                 </div>
             </section>
