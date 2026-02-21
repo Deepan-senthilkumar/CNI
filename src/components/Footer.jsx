@@ -1,0 +1,103 @@
+import { Link } from 'react-router-dom';
+import footerLogo from '../assets/images/logo_cni.png';
+
+const Footer = () => {
+    return (
+        <>
+            <footer className="footer-v2">
+                <div className="container">
+                    {/* Brand Column */}
+                    <div className="footer-brand-v2">
+                        <Link to="/" style={{ display: 'block', marginBottom: '1.5rem' }}>
+                            <img src={footerLogo} alt="CNI Business Forum" style={{ maxWidth: '140px', height: 'auto' }} />
+                        </Link>
+                        <p>CNI Business Forum is India's most reputable business networking platform, connecting innovators and
+                            leaders. We provide a wide range of services, including business development, networking events,
+                            professional training, and collaborative growth modules.</p>
+                        <div className="social-strip-v2">
+                            <a href="#"><i className="fab fa-facebook-f"></i></a>
+                            <a href="#"><i className="fab fa-instagram"></i></a>
+                            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i className="fab fa-twitter"></i></a>
+                            <a href="#"><i className="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="footer-col-v2">
+                        <h3>Quick Links</h3>
+                        <ul className="footer-links-v2">
+                            <li><Link to="/"><i className="fas fa-angle-double-right"></i> Home</Link></li>
+                            <li><Link to="/about"><i className="fas fa-angle-double-right"></i> About CNI</Link></li>
+                            <li><Link to="/membership"><i className="fas fa-angle-double-right"></i> Membership</Link></li>
+                            <li><Link to="/events" className="footer-links-item"><i className="fas fa-angle-double-right"></i> Events</Link></li>
+                            <li><Link to="/contact"><i className="fas fa-angle-double-right"></i> Contact Us</Link></li>
+                            <li><Link to="/faq"><i className="fas fa-angle-double-right"></i> FAQ</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Member Links */}
+                    <div className="footer-col-v2">
+                        <h3>Member Links</h3>
+                        <ul className="footer-links-v2">
+                            <li><Link to="/weekly-meeting"><i className="fas fa-angle-double-right"></i> Weekly Meeting</Link></li>
+                            <li><Link to="/cni-leaders"><i className="fas fa-angle-double-right"></i> CNI Leaders</Link></li>
+                            <li><Link to="/chapters"><i className="fas fa-angle-double-right"></i> CNI Chapters</Link></li>
+                            <li><a href="https://www.dot-consulting.org/articles/foundations-of-modern-higher-education.html?psystem=PW&domain=cnifoundation.com&oref=https%3A%2F%2Fwww.cnibusinessforum.com%2F" target="_blank" rel="noopener noreferrer"><i className="fas fa-angle-double-right"></i> CNI Foundation</a></li>
+                            <li><Link to="/franchise"><i className="fas fa-angle-double-right"></i> Franchise</Link></li>
+                            <li><Link to="/policies"><i className="fas fa-angle-double-right"></i> CNI Policies</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Contacts */}
+                    <div className="footer-col-v2">
+                        <h3>Contacts</h3>
+                        <div className="contact-box-v2">
+                            <div className="contact-icon-v2"><i className="fas fa-map-marker-alt"></i></div>
+                            <div className="contact-details-v2">
+                                <strong>Address:</strong>
+                                <p>Prompt Tower, Plot No: 324, Ram Nagar South, Near Kamakshi Hospital, Chennai - 600 100</p>
+                            </div>
+                        </div>
+                        <div className="contact-box-v2">
+                            <div className="contact-icon-v2"><i className="fas fa-envelope"></i></div>
+                            <div className="contact-details-v2">
+                                <strong>Email:</strong>
+                                <p>info@cnibusinessforum.com</p>
+                            </div>
+                        </div>
+                        <div className="contact-box-v2">
+                            <div className="contact-icon-v2"><i className="fas fa-phone-alt"></i></div>
+                            <div className="contact-details-v2">
+                                <strong>Phone:</strong>
+                                <p>+91-93620 50255</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="footer-bottom-v2"
+                    style={{ background: '#111', padding: '15px 0', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '30px' }}>
+                    <div className="container"
+                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#fff', fontSize: '0.85rem' }}>
+                        <p style={{ flex: 1, textAlign: 'left', margin: 0, color: '#fff' }}>
+                            <a href="#" style={{ color: 'inherit', transition: 'color 0.3s' }}>Terms and Conditions</a>
+                        </p>
+
+                        <p style={{ flex: 1, textAlign: 'center', margin: 0, color: '#fff' }}>© 2026 CNI Business Forum. All rights reserved.</p>
+
+                        <p style={{ flex: 1, textAlign: 'right', margin: 0, color: '#fff' }}>Designed by <span
+                            style={{ color: '#eb7125' }}><a href="https://www.oceansoftwares.com"
+                                style={{ color: 'inherit', transition: 'color 0.3s' }}> Ocean Softwares</a></span></p>
+                    </div>
+                </div>
+            </footer>
+
+            <a href="#home" className="back-to-top" title="Scroll to Top">
+                <i className="fas fa-arrow-up"></i>
+            </a>
+        </>
+    );
+};
+
+export default Footer;
