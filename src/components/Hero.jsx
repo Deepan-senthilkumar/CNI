@@ -6,7 +6,7 @@ const Hero = () => {
             <div className="container">
                 <div className="hero-text-content animate-on-scroll" style={{ marginBottom: '2rem' }}>
                     <h1>CONSTRUCTION NETWORK OF INDIA</h1>
-                    <p style={{ fontSize: '1.5rem', color: '#e2e8f0', marginTop: '1rem', fontWeight: 500 }}>
+                    <p style={{ fontSize: '1.5rem', color: '#fff', marginTop: '1rem', fontWeight: 500 }}>
                         Connecting Construction Industry Professionals
                     </p>
                 </div>

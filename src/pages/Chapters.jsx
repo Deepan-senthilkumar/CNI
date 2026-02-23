@@ -175,7 +175,7 @@ const Chapters = () => {
             <section className="chapters-directory-section" style={{ background: '#f8fafc', padding: '60px 0 100px' }}>
                 <div className="container">
                     <div className="section-title" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#2d4f7c', position: 'relative', display: 'inline-block' }}>
+                        <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--leader-secondary)', position: 'relative', display: 'inline-block' }}>
                             Explore Our Regions
                             <div style={{ height: '4px', width: '60px', background: 'var(--leader-secondary)', margin: '0.5rem auto 0', borderRadius: '2px' }}></div>
                         </h2>

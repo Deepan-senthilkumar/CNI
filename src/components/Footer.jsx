@@ -80,8 +80,12 @@ const Footer = () => {
                     style={{ background: '#111', padding: '15px 0', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '30px' }}>
                     <div className="container"
                         style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#fff', fontSize: '0.85rem' }}>
-                        <p style={{ flex: 1, textAlign: 'left', margin: 0, color: '#fff' }}>
-                            <a href="#" style={{ color: 'inherit', transition: 'color 0.3s' }}>Terms and Conditions</a>
+                        <p style={{ flex: 1, textAlign: 'left', margin: 0, color: '#fff', display: 'flex', gap: '15px' }}>
+                            <Link to="/terms-and-conditions" style={{ color: 'inherit', transition: 'color 0.3s' }}>Terms</Link>
+                            <span style={{ opacity: 0.5 }}>|</span>
+                            <Link to="/privacy-policy" style={{ color: 'inherit', transition: 'color 0.3s' }}>Privacy</Link>
+                            <span style={{ opacity: 0.5 }}>|</span>
+                            <Link to="/refund-policy" style={{ color: 'inherit', transition: 'color 0.3s' }}>Refund</Link>
                         </p>
 
                         <p style={{ flex: 1, textAlign: 'center', margin: 0, color: '#fff' }}>© 2026 CNI Business Forum. All rights reserved.</p>

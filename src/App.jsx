@@ -17,12 +17,18 @@ import EventDetail from './pages/EventDetail';
 import Membership from './pages/Membership';
 import Franchise from './pages/Franchise';
 import Policies from './pages/Policies';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+
+
+
 
 // Import CSS
 import './assets/css/styles.css';
 import './assets/css/space-button.css';
 import './assets/css/founder-premium.css';
-import './assets/css/partners.css';
+
 import './assets/css/gallery-premium.css';
 import './assets/css/membership-premium.css';
 import './assets/css/contact-premium.css';
@@ -31,6 +37,12 @@ import './assets/css/weekly-meeting-premium.css';
 import './assets/css/cni-leaders-premium.css';
 import './assets/css/franchise-premium.css';
 import './assets/css/policies-premium.css';
+import './assets/css/terms-and-conditions-premium.css';
+import './assets/css/privacy-policy-premium.css';
+import './assets/css/refund-policy-premium.css';
+
+
+
 
 function App() {
     return (
@@ -50,6 +62,12 @@ function App() {
                     <Route path="/chapters" element={<Chapters />} />
                     <Route path="/franchise" element={<Franchise />} />
                     <Route path="/policies" element={<Policies />} />
+                    <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/refund-policy" element={<RefundPolicy />} />
+
+
+
                     <Route path="/chapter-detail/:id" element={<ChapterDetail />} />
                     <Route path="/event-detail/:id" element={<EventDetail />} />
                 </Routes>

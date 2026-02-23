@@ -14,7 +14,7 @@ const About = () => {
                     </div>
 
                     <div className="about-content-fluid animate-on-scroll">
-                        <h2>Building a Legacy of <span style={{ color: 'var(--primary-color)' }}>Construction Excellence</span></h2>
+                        <h2>Building a Legacy of <span style={{ color: 'var(--secondary-color)' }}>Construction Excellence</span></h2>
                         <p>Conceived and organized by industry professionals who deeply understand the dynamics of referral
                             marketing, CNI (Construction Network of India) is a first-of-its-kind, member-focused business
                             network exclusively for the construction industry.</p>

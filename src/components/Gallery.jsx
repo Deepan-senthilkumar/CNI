@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <section id="gallery" className="section-padding" style={{ background: 'var(--surface-color)', marginBottom: '80px' }}>
+        <section id="gallery" className="section-padding" style={{ background: '#ffffff', marginBottom: '80px', paddingTop: '31px' }}>
             <div className="container">
                 <div className="section-header animate-on-scroll">
                     <span className="section-subtitle">Visual Showcase</span>
