@@ -16,18 +16,25 @@
     overflow-x: hidden;
 }
 
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4 {
+    font-family: 'Outfit', sans-serif;
+}
+
 /* 1. Hero Section */
 .about-hero-section {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
+    height: 80vh;
+    min-height: 500px;
     background: url('../images/premium_hero_banner_1770813875811.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-   
+
     /* Offset for fixed header */
 }
 
@@ -56,6 +63,7 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--primary-orange);
 }
 
 .about-hero-subtitle {

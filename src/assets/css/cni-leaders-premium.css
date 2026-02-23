@@ -14,14 +14,22 @@
 .cni-leaders-page {
     font-family: var(--leader-font-body);
     background: #fdfdfd;
-    margin-top: 1px;
+
     overflow-x: hidden;
+}
+
+.cni-leaders-page h1,
+.cni-leaders-page h2,
+.cni-leaders-page h3,
+.cni-leaders-page h4 {
+    font-family: 'Outfit', sans-serif;
 }
 
 /* 1. Dynamic Hero */
 .leader-hero {
     position: relative;
-    padding: 8rem 0 6rem;
+    height: 80vh;
+    min-height: 500px;
     background: linear-gradient(rgba(16, 24, 40, 0.85), rgba(16, 24, 40, 0.95)),
         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
@@ -29,14 +37,18 @@
     background-attachment: fixed;
     text-align: center;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .leader-hero h1 {
     font-family: var(--leader-font-heading);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
+    color: var(--leader-secondary);
 }
 
 .chapter-badge-premium {
@@ -818,8 +830,8 @@
 /* 8. Chapters Hero Section (Consistency with About Page) */
 .chapters-hero-section {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
+    height: 80vh;
+    min-height: 500px;
     background: url('../images/chapters_hero_banner_1771390070432.png') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -851,8 +863,8 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    color: var(--leader-secondary);
+    font-family: 'Outfit', sans-serif;
 }
 
 .chapters-hero-subtitle {
@@ -957,8 +969,8 @@
     font-weight: 800 !important;
     line-height: 1.2 !important;
     margin: 0 !important;
-    color: #ffffff !important;
-    /* White for better premium contrast */
+    color: var(--leader-secondary) !important;
+    /* Orange for better premium contrast */
     font-family: 'Outfit', sans-serif;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -1065,7 +1077,7 @@
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.5px;
     margin: 0.5rem 0;
-    color: #ffffff;
+    color: var(--leader-secondary);
 }
 
 .hero-content-wrapper p {

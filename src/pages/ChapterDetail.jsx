@@ -63,7 +63,7 @@ const ChapterDetail = () => {
                 }}></div>
                 <div className="container" style={{ position: 'relative', zIndex: 5, maxWidth: '1400px', textAlign: 'center' }}>
                     <div className="hero-content-wrapper animate-roster">
-                        <h1 style={{ color: '#fff', fontSize: '3.5rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        <h1 style={{ color: '#eb7125', fontSize: '3.5rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>
                             {chapterDetails.name}
                         </h1>
                         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.2rem', fontWeight: '500', marginTop: '1rem' }}>

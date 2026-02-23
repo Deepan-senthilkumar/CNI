@@ -77,7 +77,7 @@ const EventDetail = () => {
                             color: '#fff'
                         }}>
 
-                            <h1 style={{ fontSize: '3.5rem', fontWeight: '800', margin: '0' }}>{currentEvent.title}</h1>
+                            <h1 style={{ fontSize: '3.5rem', fontWeight: '800', margin: '0', color: '#eb7125' }}>{currentEvent.title}</h1>
                         </div>
                     </div>
                 </div>

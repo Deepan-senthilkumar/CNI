@@ -57,7 +57,7 @@
 .founder-name-large {
     font-size: 3.5rem;
     font-family: var(--font-heading);
-    color: var(--text-color);
+    color: var(--secondary-color);
     line-height: 1.1;
     margin-bottom: 0.5rem;
     text-align: left;
@@ -65,7 +65,7 @@
 
 .founder-designation {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: black;
     font-weight: 700;
     margin-bottom: 2.5rem;
     display: block;
@@ -96,7 +96,7 @@
 }
 
 .signature-text {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
     color: var(--primary-color);
     display: block;

@@ -5,10 +5,17 @@
 }
 
 .faq-page-container {
-
+    font-family: 'Inter', sans-serif;
     /* Header spacing */
     background: #f8fafc;
     min-height: 100vh;
+}
+
+.faq-page-container h1,
+.faq-page-container h2,
+.faq-page-container h3,
+.faq-page-container h4 {
+    font-family: 'Outfit', sans-serif;
 }
 
 .faq-hero {
@@ -17,7 +24,11 @@
     background-position: center;
     background-attachment: fixed;
     color: white;
-    padding: 8rem 0;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -40,16 +51,18 @@
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
-    color: #ffffffa3;
+    color: var(--faq-secondary);
 }
 
 .faq-hero p {
     font-size: 1.25rem;
+    font-weight: 500;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    color: #ffffff;
 }
 
 .faq-content-section {
@@ -70,7 +83,7 @@
 
 .faq-sidebar h2 {
     font-size: 2rem;
-    color: var(--faq-primary);
+    color: var(--faq-secondary);
     margin-bottom: 1.5rem;
 }
 
