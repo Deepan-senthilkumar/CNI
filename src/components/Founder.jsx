@@ -18,7 +18,7 @@ const Founder = () => {
                 {/* Founder Content */}
                 <div className="founder-text-premium">
                     <h2 className="founder-name-large">Mr. E. Udayakumar</h2>
-                    <span className="founder-designation" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>
+                    <span className="founder-designation" style={{ color: 'black', fontWeight: 700 }}>
                         Managing Director & CEO, PROMPT Group of Companies
                     </span>
 

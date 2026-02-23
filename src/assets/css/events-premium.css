@@ -9,24 +9,45 @@
     --arch-white: #ffffff;
     --arch-brown: #8d7b5b;
     /* For footer background */
-    --font-serif: 'Times New Roman', Times, serif;
-    /* Or a Google Font if available */
+    --font-serif: 'Outfit', sans-serif;
+    /* Standardized to match home page */
     --font-sans: 'Inter', sans-serif;
 }
 
 /* Page Wrapper */
 .events-page-arch {
-    font-family: var(--font-sans);
+    font-family: 'Inter', sans-serif;
     color: var(--arch-black);
     background-color: var(--arch-white);
 
     overflow-x: hidden;
 }
 
-/* 1. Arch Hero Section */
+.events-page-arch *:not(i):not(.fa):not(.fas):not(.far):not(.fab) {
+    font-family: 'Inter', sans-serif;
+}
+
+.events-page-arch h1,
+.events-page-arch h2,
+.events-page-arch h3,
+.events-page-arch h4,
+.events-page-arch h5,
+.events-page-arch h6 {
+    font-family: 'Outfit', sans-serif;
+}
+
 .arch-hero-section {
-    padding: 4rem 0;
-    background: var(--arch-white);
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('../images/event-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
 }
 
 .arch-hero-container {
@@ -41,11 +62,10 @@
 }
 
 .arch-headline {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: 3rem;
     line-height: 1.2;
-    font-weight: 400;
-    /* Lighter weight for "Network that" */
+    font-weight: 800;
     margin-bottom: 1.5rem;
     color: var(--arch-dark-grey);
 }
@@ -137,9 +157,9 @@
 }
 
 .date-banner-content h2 {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 2rem;
     color: var(--arch-dark-grey);
 }
@@ -199,9 +219,9 @@
 }
 
 .section-title-arch h2 {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 .highlight-text-bg {
@@ -323,7 +343,7 @@
     margin-bottom: 2rem;
     font-weight: 500;
     padding-bottom: 0;
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
 }
 
 .card-motto::after {
@@ -388,9 +408,9 @@
 }
 
 .future-content h2 {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
     text-align: left;
@@ -429,8 +449,9 @@
 }
 
 .represents-section h2 {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: 2.2rem;
+    font-weight: 800;
     margin-bottom: 2rem;
 }
 
@@ -467,7 +488,7 @@
 
 .arch-footer-quote {
     font-size: 1.5rem;
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-style: italic;
     max-width: 700px;
     margin: 0 auto 3rem;
@@ -523,7 +544,7 @@
 
 /* Upcoming Events Section Spacing */
 .upcoming-events-section {
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 }
 
@@ -539,7 +560,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #ef5920;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -559,12 +580,13 @@
 }
 
 .hq-title {
-    font-family: var(--font-serif);
+    font-family: 'Outfit', sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    color: var(--secondary-color);
 }
 
 .hq-subtitle {
@@ -963,4 +985,5 @@
 
 .hq-title {
     transition: all 0.4s ease;
+    font-family: 'Outfit', sans-serif;
 }
