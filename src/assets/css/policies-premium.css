@@ -26,6 +26,10 @@
     color: #ffffff;
 }
 
+.policies-hero .container {
+    transform: translateY(-40px);
+}
+
 .policies-hero h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -33,6 +37,7 @@
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #eb7125;
+    text-transform: uppercase;
 }
 
 .policies-hero p {

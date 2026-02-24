@@ -215,25 +215,28 @@ nav {
 }
 
 .cta-button {
-    background: #1a395f;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 12px;
+    background: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
     font-weight: 600;
-    transition: all var(--transition-speed);
-    border: none;
+    transition: all 0.3s ease;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     font-size: 0.9rem;
 }
 
 .cta-button:hover {
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
-    filter: brightness(1.1);
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
+    filter: none;
 }
 
 /* Hero Section - Premium Architectural Update */
@@ -444,7 +447,12 @@ nav {
 }
 
 .section-header h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+    font-family: 'Outfit', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -550,6 +558,11 @@ nav {
 
 .about-content-fluid h2 {
     font-size: 3rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+    font-family: 'Outfit', sans-serif;
     line-height: 1.1;
     margin-bottom: 2rem;
     text-align: left;
@@ -590,7 +603,7 @@ nav {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 60px 0 100px;
+    padding: 23px 0 38px;
 }
 
 
@@ -635,7 +648,7 @@ nav {
 
 .event-image {
     width: 100%;
-    height: 220px;
+    height: 180px;
     position: relative;
     overflow: hidden;
 }
@@ -683,7 +696,7 @@ nav {
 }
 
 .event-content {
-    padding: 2rem;
+    padding: 1.25rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -715,9 +728,9 @@ nav {
 .event-meta {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    gap: 0.4rem;
+
+    padding-bottom: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -737,9 +750,26 @@ nav {
 
 .event-card .cta-button {
     width: 100%;
-    padding: 1rem;
+    margin-top: auto;
+    background: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.8rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.event-card .cta-button:hover {
+    background: #eb7125;
+    color: #fff;
+    border-color: #eb7125;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
+    filter: none;
 }
 
 
@@ -1064,7 +1094,7 @@ nav {
 .contact-details-v2 strong {
     display: block;
     font-size: 1.1rem;
-    color: #ef5920;
+    color: #ef5920c7;
     margin-bottom: 0.5rem;
 }
 
@@ -1390,18 +1420,23 @@ nav {
 .meeting-btn {
     margin-top: auto;
     background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.8rem;
-    text-align: center;
-    border-radius: 10px;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
 .meeting-btn:hover {
-    background: var(--primary-color);
-    color: #ffffff;
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 /* Testimonials Slider - Framed Modern Layout */
@@ -1474,7 +1509,7 @@ nav {
 .client-script {
     font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: #2d4f7c;
     line-height: 1;
     display: block;
     margin-bottom: 0.5rem;

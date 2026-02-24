@@ -79,32 +79,34 @@
 }
 
 .btn-primary-mem {
-    background: var(--mem-secondary);
-    color: white;
+    background: transparent;
+    color: #fff;
     padding: 1rem 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.9rem;
     border-radius: 50px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 10px 20px rgba(235, 113, 37, 0.3);
 }
 
 .btn-primary-mem:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(235, 113, 37, 0.5);
-    background: #d96218;
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 .btn-secondary-mem {
     background: transparent;
-    color: white;
+    color: #fff;
     padding: 1rem 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.9rem;
     border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -112,8 +114,10 @@
 }
 
 .btn-secondary-mem:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: white;
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 /* 2. Benefits Section */
@@ -365,22 +369,25 @@
 }
 
 .btn-submit {
-    background: var(--mem-primary);
-    color: white;
+    background: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 1rem;
-    font-weight: 700;
-    border-radius: 8px;
-    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 1rem;
 }
 
 .btn-submit:hover {
-    background: #1e40af;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 /* Create Member Form Section */
@@ -447,19 +454,24 @@
 }
 
 .btn-choose {
-    background: #fff;
-    border: 1px solid #3b82f6;
-    color: #3b82f6;
+    background: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 0.6rem 2.5rem;
-    border-radius: 6px;
     font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-choose:hover {
-    background: #3b82f6;
-    color: #fff;
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 .form-row {

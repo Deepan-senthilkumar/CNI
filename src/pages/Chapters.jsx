@@ -121,7 +121,7 @@ const Chapters = () => {
             <section className="chapters-hero-section">
                 <div className="chapters-hero-content">
                     <h1 className="chapters-hero-title">Our Chapters</h1>
-                    <p className="chapters-hero-subtitle">A powerful network of construction professionals across different regions, driving innovation and collaboration.</p>
+                    <p className="chapters-hero-subtitle">Powerful network driving innovation.</p>
                 </div>
             </section>
 
@@ -155,17 +155,11 @@ const Chapters = () => {
                         }}></div>
 
                         <div style={{ position: 'relative', zIndex: '2' }}>
-                            <h2 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: '700', marginBottom: '1.5rem', opacity: '0.9', color: '#ffbd94' }}>Global Network Strength</h2>
+                            <h2 style={{ fontSize: '2.2rem', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: '700', marginBottom: '1.5rem', opacity: '0.9', color: '#eb7125' }}>Global Network Strength</h2>
                             <div style={{ fontSize: '5.5rem', fontWeight: '900', marginBottom: '1rem', lineHeight: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
                                 <ChapterCounter target={45} />+
                             </div>
-                            <p style={{
-                                fontSize: '1.8rem',
-                                fontWeight: '700',
-                                letterSpacing: '2px',
-                                textShadow: '0 2px 10px rgba(0,0,0,0.3)',
-                                color: '#f97316'
-                            }}>Active Chapters Across India</p>
+
                         </div>
                     </div>
                 </div>

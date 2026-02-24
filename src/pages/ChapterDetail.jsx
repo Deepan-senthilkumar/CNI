@@ -53,8 +53,7 @@ const ChapterDetail = () => {
             {/* Premium Chapter Banner */}
             <section className="chapter-detail-hero">
                 <div className="hq-banner-bg" style={{
-                    backgroundImage: `url(${chennaiAspireBg})`,
-                    filter: 'brightness(0.4)',
+                    backgroundImage: `linear-gradient(rgb(15 23 42 / 64%), rgb(15 23 42 / 45%)), url(${chennaiAspireBg})`,
                     position: 'absolute',
                     inset: 0,
                     backgroundSize: 'cover',
@@ -63,7 +62,7 @@ const ChapterDetail = () => {
                 }}></div>
                 <div className="container" style={{ position: 'relative', zIndex: 5, maxWidth: '1400px', textAlign: 'center' }}>
                     <div className="hero-content-wrapper animate-roster">
-                        <h1 style={{ color: '#eb7125', fontSize: '3.5rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        <h1 style={{ color: '#eb7125', fontSize: '3.5rem', fontWeight: '800', textTransform: 'uppercase', textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)', fontFamily: "'Outfit', sans-serif", letterSpacing: '-1px' }}>
                             {chapterDetails.name}
                         </h1>
                         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.2rem', fontWeight: '500', marginTop: '1rem' }}>

@@ -138,7 +138,6 @@ const Contact = () => {
                             </div>
                             <h3>Coimbatore</h3>
                             <p>54 D, 1st Floor, Jayavarthanavelu Nagar, Masakkalipalayam Road, Peelamedu, CBE - 641004.</p>
-                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Madurai */}
@@ -148,7 +147,6 @@ const Contact = () => {
                             </div>
                             <h3>Madurai</h3>
                             <p># 279, 1st, East Main Road, Anna Nagar, Madurai - 625020.</p>
-                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Trichy */}
@@ -158,7 +156,6 @@ const Contact = () => {
                             </div>
                             <h3>Trichy</h3>
                             <p>No.135, Ponnagar, Near Adjacent Swarna Vinayagar Temple, Trichy - 620001.</p>
-                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
 
                         {/* Erode */}
@@ -168,7 +165,6 @@ const Contact = () => {
                             </div>
                             <h3>Erode</h3>
                             <p>Nachimuthu Complex, Second Floor, Perundurai Main Road, Erode - 638012.</p>
-                            <a href="#" className="map-link">View on Map <i className="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>

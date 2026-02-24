@@ -54,7 +54,9 @@
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
-    color: var(--wm-secondary);
+    color: #eb7125;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .wm-hero p {
@@ -68,7 +70,7 @@
 
 /* 2. Overview Section */
 .wm-overview {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--wm-light);
 }
 
@@ -102,7 +104,7 @@
 
 /* 3. Protocols / Procedures */
 .wm-protocol-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
     position: relative;
     background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
@@ -112,7 +114,7 @@
 }
 
 .wm-protocol-section .section-title h2 {
-    color: #ffffff;
+    color: #eb7125;
 }
 
 .wm-protocol-section .section-title p {
@@ -140,9 +142,21 @@
 }
 
 .wm-info-box i {
-    font-size: 2rem;
-    color: var(--wm-secondary);
+    width: 64px;
+    height: 64px;
+    background: rgba(226, 232, 240, 0.5);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--wm-primary);
     margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.wm-info-box:hover i {
+    color: var(--wm-secondary);
 }
 
 .wm-info-box h3 {
@@ -153,7 +167,7 @@
 
 /* 4. Order of Meeting (Timeline) */
 .wm-run-order {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: #fdfae7;
     color: var(--wm-dark);
 }
@@ -209,7 +223,7 @@
 /* 5. Awards Section */
 .wm-awards,
 .wm-awards-section {
-    padding: 6rem 0 10rem;
+    padding: 1rem 0 4rem;
     background: var(--wm-white);
 }
 
@@ -229,9 +243,21 @@
 }
 
 .award-card i {
-    font-size: 2.5rem;
-    color: #f59e0b;
-    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    background: rgba(226, 232, 240, 0.5);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--wm-primary);
+    margin: 0 auto 1.5rem auto;
+    transition: all 0.3s ease;
+}
+
+.award-card:hover i {
+    color: var(--wm-secondary);
 }
 
 /* General Utilities */

@@ -65,7 +65,9 @@
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -1px;
-    color: var(--c-secondary);
+    color: #eb7125;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-hero-v2 p {
@@ -171,13 +173,15 @@
 
 .submit-btn-v2 {
     grid-column: span 2;
+    background: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 1.2rem;
-    background: var(--c-secondary);
-    color: var(--white);
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
@@ -187,9 +191,10 @@
 }
 
 .submit-btn-v2:hover {
-    background: #d4631d;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(235, 113, 37, 0.2);
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 /* HQ Info Card */
@@ -313,7 +318,7 @@
 .title-underline {
     width: 80px;
     height: 4px;
-    background: var(--c-secondary);
+    background: #2d4f7c;
     margin: 1rem auto;
     border-radius: 2px;
 }

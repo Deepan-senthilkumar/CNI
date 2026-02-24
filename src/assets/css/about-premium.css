@@ -2,8 +2,8 @@
 :root {
     --primary-orange: #f57c00;
     --secondary-blue: #1e293b;
-    --text-dark: #334155;
-    --text-light: #64748b;
+    --text-dark: #000;
+    --text-light: #000;
     --bg-light: #f8fafc;
     --white: #ffffff;
 }
@@ -28,7 +28,7 @@
     position: relative;
     height: 80vh;
     min-height: 500px;
-    background: url('../images/premium_hero_banner_1770813875811.png') center/cover no-repeat;
+    background: linear-gradient(rgba(15, 23, 42, 0.721), rgba(15, 23, 42, 0.763)), url('../images/premium_hero_banner_1770813875811.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,13 +48,15 @@
     height: 100%;
     background: rgba(15, 23, 42, 0.6);
     /* Dark blue tint */
+    display: none;
 }
 
 .about-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 1300px;
     padding: 0 20px;
+    width: 100%;
 }
 
 .about-hero-title {
@@ -63,7 +65,8 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    color: var(--primary-orange);
+    color: #eb7125;
+    text-transform: uppercase;
 }
 
 .about-hero-subtitle {
@@ -76,7 +79,7 @@
 
 /* 2. Intro Section (Split Layout) */
 .intro-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--white);
 }
 
@@ -90,7 +93,7 @@
 .intro-text h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-blue);
+    color: #eb7125;
     margin-bottom: 1.5rem;
     line-height: 1.3;
     text-align: left;
@@ -132,7 +135,7 @@
 
 /* 3. Why CNI Section */
 .values-section {
-    padding: 2rem 0 6rem 0;
+    padding: 2rem 0 4rem 0;
     background-color: var(--bg-light);
 }
 
@@ -145,7 +148,7 @@
 .section-title-center h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-blue);
+    color: #eb7125;
     position: relative;
     display: inline-block;
 }
@@ -155,7 +158,7 @@
     display: block;
     width: 60px;
     height: 4px;
-    background-color: var(--primary-orange);
+    background-color: #2d4f7c;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -200,11 +203,11 @@
 /* Specific icon styles can be tweaked here */
 /* Alternate icon colors or styles if needed from the screenshot */
 .value-icon-wrapper i {
-    color: var(--secondary-blue);
+    color: #1e3a8a;
 }
 
 .value-card:nth-child(2) .value-icon-wrapper i {
-    color: var(--secondary-blue);
+    color: #1e3a8a;
 }
 
 .value-card:hover .value-icon-wrapper i {
@@ -215,7 +218,7 @@
 
 /* 4. Benefits Section */
 .benefits-section {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background-color: var(--white);
 }
 
@@ -253,14 +256,14 @@
 .benefits-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-blue);
+    color: #eb7125;
     margin-bottom: 0.5rem;
     text-align: left;
 }
 
 .benefits-header p {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: #2d4f7c;
     margin-bottom: 1rem;
 }
 

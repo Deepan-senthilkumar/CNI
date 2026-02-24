@@ -8,28 +8,32 @@ const FAQ = () => {
 
     const faqData = [
         {
-            question: "What is CNI and how can I join?",
-            answer: "CNI (Construction Network India) is a professional networking platform exclusively for the construction industry. You can join by visiting our Membership page and submitting an inquiry form. Our team will get in touch with you for the verification process."
+            question: "Are Members allowed to transfer between Chapters?",
+            answer: "CNI Forum aims at generating and building a long-term Business relationship for its members and hence does not prefer Members to change or transfer between chapters without valid reasons. However, Members may be allowed to move to other Chapters, if they have a legitimate reason for their request, such as relocation of business. The Member in such a case, is expected to appoint a suitable replacement for themselves in their Chapter, who would represent the specific business segment. The Member who has requested for transfer will however need to submit a written request and gain the approval of the respective Regional Director of their existing chapter and the chapter to which they have applied for transfer."
         },
         {
-            question: "How often are the weekly meetings held?",
-            answer: "Each chapter holds weekly meetings on their designated days (e.g., Tuesday, Wednesday, or Friday) at 8:00 AM. These meetings are focused on business exchanges, referrals, and industry updates."
+            question: "Are Members allowed to change their Business segment in the CNI Chapter?",
+            answer: "In the event of a valid reason, such as a new business venture of the Member, he/she may be permitted a change of Business classification. Members who wish to change their classification must submit a new membership application and obtain approval from the Chapter CEO and Regional Director for the classification change."
         },
         {
-            question: "Can I visit a chapter before joining?",
-            answer: "Yes, we encourage potential members to visit as a guest. You can register for a guest invitation through our Events or Contact page to experience a typical CNI meeting firsthand."
+            question: "Is absence for Medical reasons allowed in CNI Forum meetings?",
+            answer: "CNI Forum chapter meetings permit leaves of absence only for valid reasons such as medical ailments. However, a Member taking leave will have to depute a suitable substitute from his organization and inform the Chapter committee accordingly, prior to the Chapter meeting schedules."
         },
         {
-            question: "What are the benefits of CNI membership?",
-            answer: "Members get access to an exclusive network of builders and contractors, quality business referrals, professional development sessions, and the opportunity to showcase their services to a dedicated audience."
+            question: "Are CNI Members allowed to visit other Chapters?",
+            answer: "Members are allowed to visit other chapters after gaining approvals of the respective Chapter CEOs, as 'Visiting Members'. The Members are permitted to visit other chapters up to a maximum of two times. However, the Visiting Member should ascertain of there is any Member in the Chapter whose category conflicts with their own business segment. The Chapter CEO will have the authority over giving a Visiting Member the opportunity to speak and represent his business during the Meeting."
         },
         {
-            question: "How do I start a new CNI chapter in my region?",
-            answer: "Starting a new chapter requires a minimum number of dedicated professionals from the construction sector. Please contact our Regional Directors or the Head Office for detailed guidance on chapter formation."
+            question: "Does CNI Chapter have a size limit and for what reason?",
+            answer: "CNI promotes Business connects among a Group of Construction Industry Professionals, with maximum of Members in a single chapter."
         },
         {
-            question: "Is there a specific industry niche required to join?",
-            answer: "CNI is open to all professionals related to the construction ecosystem, including builders, architects, civil engineers, interior designers, and material suppliers."
+            question: "What is the actual role of a Core Committee?",
+            answer: "CNI Chapters need effective methods to screen and validate aspirants in order to maintain their quality and credibility. It remains the task of the Core committee to interview the aspiring applicants, gain a fair understanding of his/her commitment to the Chapter, Professionalism and Business segment being represented. It is the Core committee that will decide and notify the applicant of the status of their application. Further, the committee will also evaluate the Member's performance metrics on the basis of the regular attendance, participation, contribution and professionalism with reference to the Chapter. In case of a written complaint against a Member, the committee will review the situation according to the policies stated herewith and if not resolved, will escalate to the respective Regional Director and Core Committee to open the respective Member's Business classification for a new aspirant."
+        },
+        {
+            question: "Does CNI Forum offer provision for Refund of fees?",
+            answer: "CNI Forum holds a clear stated policy of No Refund for the fees paid. If a Member chooses to leave a Chapter, it happens to be their choice. On the other hand, if a Member is terminated by the Chapter Core Committee for reasons such as the Member not fulfilling the commitments that they agreed to; still the reasons for the termination will be clearly explained and the fees paid are still not refundable."
         }
     ];
 
@@ -83,7 +87,7 @@ const FAQ = () => {
 
                             {/* Empty state for more categories if needed */}
                             <div style={{ marginTop: '3rem', borderTop: '1px solid #e2e8f0', paddingTop: '2rem' }}>
-                                <p style={{ color: '#94a3b8', fontStyle: 'italic' }}>
+                                <p style={{ color: '#000', fontStyle: 'italic' }}>
                                     More questions are added regularly based on member feedback.
                                 </p>
                             </div>
