@@ -13,7 +13,7 @@ import cniLogo from '../assets/images/logog.png';
 const EventsPage = () => {
     const navigate = useNavigate();
     const [eventBanner, setEventBanner] = React.useState('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-    const [eventBannerTitle, setEventBannerTitle] = React.useState('Chennai Central Chapter');
+    const [eventBannerTitle, setEventBannerTitle] = React.useState('Chennai Central Chapter: Founders Meetup');
     const [isRegisterModalOpen, setIsRegisterModalOpen] = React.useState(false);
     const [selectedEventForReg, setSelectedEventForReg] = React.useState('');
 
@@ -166,7 +166,7 @@ const EventsPage = () => {
             <section className="why-arch-section">
                 <div className="container">
                     <div className="section-title-arch animate-on-scroll">
-                        <h2>Why <span className="highlight-text-bg">ARCH CONNECT</span> Exists</h2>
+                        <h2>WHY <span className="highlight-text-bg">ARCH CONNECT</span> EXISTS</h2>
                     </div>
 
                     <div className="why-arch-grid">
@@ -214,7 +214,7 @@ const EventsPage = () => {
                         <p><strong>We don't just connect businesses—we architect the relationships that build nations.</strong></p>
                         <p>As India's most trusted construction ecosystem, CNI has consistently delivered what others only promise: direct access to decision-makers, quality-verified partnerships, and measurable business growth. Our network includes the country's most influential architects, premier manufacturers, trusted contractors, and innovative solution providers who collectively shape India's skyline.</p>
 
-                        <button className="btn-future">Fetch your invites here</button>
+                        <button className="btn-future" onClick={() => navigate('/contact')}>Fetch your invites here</button>
                     </div>
                 </div>
             </section>

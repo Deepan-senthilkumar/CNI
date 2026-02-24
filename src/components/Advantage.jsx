@@ -9,7 +9,7 @@ const Advantage = () => {
         <section id="advantage" style={{ background: 'var(--bg-color)', overflow: 'hidden', padding: '40px 0 80px' }}>
             <div className="container">
                 <div className="section-header animate-on-scroll">
-                    <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', lineHeight: 1 }}>The CNI Advantage</h2>
+                    <h2>The CNI Advantage</h2>
                     <p style={{ color: 'var(--text-muted)', maxWidth: '800px', margin: '2rem auto 0', fontSize: '1.2rem' }}>
                         Breaking the traditional boxy networking mold with a fluid ecosystem designed for the modern construction
                         professional.

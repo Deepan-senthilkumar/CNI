@@ -15,7 +15,7 @@ const Events = () => {
                 </div>
                 <div className="event-grid">
                     {/* Event 1 */}
-                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/event-detail/founders-meetup')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                                 alt="Chennai Central Chapter: Founders Meetup" />
@@ -27,11 +27,12 @@ const Events = () => {
                                 <span><i className="fas fa-clock"></i> 07:30 AM</span>
                                 <span><i className="fas fa-map-marker-alt"></i> Hotel Savera</span>
                             </div>
+                            <button className="cta-button">Read More</button>
                         </div>
                     </div>
 
                     {/* Event 2 */}
-                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/event-detail/coimbatore-expo')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg2} alt="Construction Expo" />
                         </div>
@@ -42,11 +43,12 @@ const Events = () => {
                                 <span><i className="fas fa-clock"></i> 10:00 AM</span>
                                 <span><i className="fas fa-map-marker-alt"></i> CODISSIA Complex</span>
                             </div>
+                            <button className="cta-button">Read More</button>
                         </div>
                     </div>
 
                     {/* Event 3 */}
-                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/event-detail/leadership-summit')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg3} alt="Leadership Seminar" />
                         </div>
@@ -57,11 +59,12 @@ const Events = () => {
                                 <span><i className="fas fa-clock"></i> 09:00 AM</span>
                                 <span><i className="fas fa-map-marker-alt"></i> The Residency</span>
                             </div>
+                            <button className="cta-button">Read More</button>
                         </div>
                     </div>
 
                     {/* Event 4 */}
-                    <div className="event-card animate-on-scroll" onClick={() => navigate('/events')} style={{ cursor: 'pointer' }}>
+                    <div className="event-card animate-on-scroll" onClick={() => navigate('/event-detail/business-meet')} style={{ cursor: 'pointer' }}>
                         <div className="event-image">
                             <img src={eventImg4} alt="Madurai Infrastructure Expo" />
                         </div>
@@ -72,6 +75,7 @@ const Events = () => {
                                 <span><i className="fas fa-clock"></i> 11:00 AM</span>
                                 <span><i className="fas fa-map-marker-alt"></i> Madurai Trade Center</span>
                             </div>
+                            <button className="cta-button">Read More</button>
                         </div>
                     </div>
                 </div>

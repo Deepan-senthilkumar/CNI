@@ -55,9 +55,9 @@ const AboutUs = () => {
                     <div className="intro-container">
                         <div className="intro-text animate-on-scroll">
                             <h2>Redefining Business Networking</h2>
-                            <p>The Construction Network of India (CNI) isn't just a forum; it's a strategic ecosystem. We
-                                recognized a gap in the industry—while technical skills were abundant, the avenues for
-                                structured, professional growth and high-quality lead generation were fragmented.</p>
+                            <p>The Construction Network of India (CNI) isn't just a forum it's a strategic ecosystem. We
+                                recognized a gap in the industry while technical skills were abundant, the avenues for
+                                structured, professional growth and high quality lead generation were fragmented.</p>
                             <p>We bridge that gap by bringing together architects, engineers, contractors, and material
                                 suppliers onto a single, powerful platform designed for mutual success.</p>
                         </div>
@@ -74,44 +74,44 @@ const AboutUs = () => {
                 <div className="container">
                     <div className="section-title-center animate-on-scroll">
                         <h2>Why CNI?</h2>
-                        <p style={{ color: '#64748b', marginTop: '1rem' }}>Organized by Construction Industry Professionals.</p>
+                        <p style={{ color: '#2d4f7c', marginTop: '1rem' }}>Organized by Construction Industry Professionals.</p>
                     </div>
 
                     <div className="values-grid">
                         {/* Point 1 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-hard-hat"></i></div>
-                            <p style={{ color: '#475569' }}>Organized by Construction Industry Professionals who understand the Business of Networking Marketing better.</p>
+                            <p style={{ color: '#050505ff' }}>Organized by Construction Industry Professionals who understand the Business of Networking Marketing better.</p>
                         </div>
 
                         {/* Point 2 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-crown"></i></div>
-                            <p style={{ color: '#475569' }}>A first-of-its-kind Member focused Business Network exclusive for the Construction Industry.</p>
+                            <p style={{ color: '#0c0c0cff' }}>A first-of-its-kind Member focused Business Network exclusive for the Construction Industry.</p>
                         </div>
 
                         {/* Point 3 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-comments"></i></div>
-                            <p style={{ color: '#475569' }}>Conceptualized to efficiently perform as a unique platform favoring Direct and effectual communique for enhancing Business.</p>
+                            <p style={{ color: '#0a0a0aff' }}>Conceptualized to efficiently perform as a unique platform favoring Direct and effectual communique for enhancing Business.</p>
                         </div>
 
                         {/* Point 4 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-tachometer-alt"></i></div>
-                            <p style={{ color: '#475569' }}>Business networking model that builds & establishes trust and fetches you the desired results much faster.</p>
+                            <p style={{ color: '#0b0b0bff' }}>Business networking model that builds & establishes trust and fetches you the desired results much faster.</p>
                         </div>
 
                         {/* Point 5 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-check-circle"></i></div>
-                            <p style={{ color: '#475569' }}>Earn product recommendations from the Professionals and enhance your credibility</p>
+                            <p style={{ color: '#0a0b0bff' }}>Earn product recommendations from the Professionals and enhance your credibility</p>
                         </div>
 
                         {/* Point 6 */}
                         <div className="value-card animate-on-scroll">
                             <div className="value-icon-wrapper"><i className="fas fa-chart-line"></i></div>
-                            <p style={{ color: '#475569' }}>Gain new customers, retain them and continue growing your clientele base with sustained engagement within the network.</p>
+                            <p style={{ color: '#060606ff' }}>Gain new customers, retain them and continue growing your clientele base with sustained engagement within the network.</p>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ const AboutUs = () => {
                             "A positive attitude is one of the most preferred virtues of a CNI Forum Member, further to being
                             supportive to the Team in the respective chapter, while being outstanding as a Team player. CNI
                             Forum expects its Members to be faithful to their fellow members and committed to the Philosophy of
-                            – <span className="highlight-motto">Refer and be Referred.</span>"
+                            – <span className="highlight-motto">Refer and be Referred.</span>
                         </div>
                     </div>
                 </div>

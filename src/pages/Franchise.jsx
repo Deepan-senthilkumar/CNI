@@ -22,11 +22,11 @@ const Franchise = () => {
                     <div className="partnership-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '5rem', alignItems: 'start' }}>
                         {/* Left Side: Branding & Context */}
                         <div className="partnership-branding">
-                            <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: '#101828', lineHeight: '1.1', marginBottom: '2rem', textAlign: 'left' }}>
-                                Welcome <br /><span style={{ color: '#1e3a8a' }}>To CNI</span>
+                            <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: '#eb7125', lineHeight: '1.1', marginBottom: '2rem', textAlign: 'left' }}>
+                                Welcome <br /><span style={{ color: '#eb7125' }}>To CNI</span>
                             </h2>
-                            <div style={{ width: '80px', height: '6px', background: '#eb7125', borderRadius: '3px', marginBottom: '2.5rem' }}></div>
-                            <p style={{ fontSize: '1.25rem', color: '#1e293b', fontWeight: '500', lineHeight: '1.6', marginBottom: '2rem' }}>
+                            <div style={{ width: '80px', height: '6px', background: '#2d4f7c', borderRadius: '3px', marginBottom: '2.5rem' }}></div>
+                            <p style={{ fontSize: '1.25rem', color: '#0a0a0aff', fontWeight: '500', lineHeight: '1.6', marginBottom: '2rem' }}>
                                 CNI is expanding its national presence through exclusive, high-potential franchise partnerships.
                             </p>
                             <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '30px', borderLeft: '8px solid #1e3a8a' }}>
@@ -86,9 +86,9 @@ const Franchise = () => {
                         color: '#fff',
                         boxShadow: '0 30px 60px rgba(0,0,0,0.2)'
                     }}>
-                        <h3 style={{ fontSize: '2.2rem', fontWeight: '800', margin: 0, letterSpacing: '-0.5px', color: '#fff' }}>
+                        <h3 style={{ fontSize: '2.2rem', fontWeight: '800', margin: 0, letterSpacing: '-0.5px', color: '#eb7125' }}>
                             CNI is expanding its national presence through <br />
-                            <span style={{ color: '#eb7125' }}>exclusive, high-potential franchise partnerships</span>
+                            <span style={{ color: '#fff' }}>exclusive, high-potential franchise partnerships</span>
                         </h3>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ const Franchise = () => {
                     <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
                         <i className="fas fa-project-diagram" style={{ fontSize: '3rem', color: '#1e3a8a', marginBottom: '2rem' }}></i>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>National & International Reach</h2>
-                        <p style={{ fontSize: '1.2rem', color: '#64748b', lineHeight: '1.8' }}>
+                        <p style={{ fontSize: '1.2rem', color: '#030303ff', lineHeight: '1.8' }}>
                             CNI opens the doors to powerful collaboration across India and beyond. As a franchise partner, you gain access to a rapidly expanding national network of construction professionals, industry leaders, and business innovators. This ecosystem enables you to build strategic alliances, exchange opportunities across states, and explore cross-border collaborations with global partners connected through CNI’s ecosystem. A single platform that elevates your business visibility, influence, and reach—far beyond your local market.
                         </p>
                     </div>

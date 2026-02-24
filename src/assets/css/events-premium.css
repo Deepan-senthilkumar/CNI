@@ -40,7 +40,7 @@
     position: relative;
     height: 80vh;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('../images/event-hero-bg.jpg');
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('../images/event-hero-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -63,11 +63,13 @@
 
 .arch-headline {
     font-family: 'Outfit', sans-serif;
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    color: var(--arch-dark-grey);
+    line-height: 1.2;
+    color: #eb7125;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .highlight-box {
@@ -264,7 +266,7 @@
 /* 4. Why Arch Connect */
 /* 4. Why Arch Connect - Home Page Theme Style */
 .why-arch-section {
-    padding: 8rem 0;
+    padding: 5rem 0;
     /* High-end architectural background */
     background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
@@ -330,14 +332,14 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #fff;
+    color: #eb7125;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .card-motto {
-    color: #eb7125;
-    /* CNI Orange */
+    color: #000;
+    /* Black */
     font-size: 1.1rem;
     font-style: italic;
     margin-bottom: 2rem;
@@ -381,7 +383,7 @@
 
 /* 5. Construction Future */
 .construction-future-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background: #fdfae7;
     /* Very light beige/gold tint */
 }
@@ -430,16 +432,24 @@
 
 .btn-future {
     background: transparent;
-    border: 2px solid var(--arch-black);
+    color: var(--arch-black);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 0.8rem 2rem;
-    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
 
 .btn-future:hover {
-    background: var(--arch-black);
-    color: var(--arch-white);
+    background: #eb7125;
+    /* CNI Orange */
+    color: #fff;
+    border-color: #eb7125;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 /* 6. Why ARCH Represents */
@@ -581,12 +591,14 @@
 
 .hq-title {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    color: var(--secondary-color);
+    letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #eb7125;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 .hq-subtitle {

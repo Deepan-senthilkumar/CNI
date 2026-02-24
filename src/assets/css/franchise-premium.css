@@ -27,7 +27,7 @@
     position: relative;
     height: 80vh;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
+    background: linear-gradient(rgba(15, 23, 42, 0.726), rgba(15, 23, 42, 0.826)),
         url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -45,7 +45,9 @@
     margin-bottom: 1.5rem;
     letter-spacing: -1px;
     line-height: 1.1;
-    color: var(--f-secondary);
+    color: #eb7125;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .franchise-hero p {
@@ -175,7 +177,7 @@
 }
 
 .pillar-card p {
-    color: var(--f-slate);
+    color: #000000;
     line-height: 1.8;
     margin: 0;
     font-size: 1.05rem;
@@ -249,7 +251,7 @@
 .rev-text p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--f-slate);
+    color: #000000;
 }
 
 /* 5. Leadership CTA */
@@ -274,12 +276,13 @@
 }
 
 .cta-banner .enquire-btn {
-    background: var(--f-secondary);
-    color: white;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1.2rem 3.5rem;
-    border-radius: 100px;
-    font-size: 1.15rem;
-    font-weight: 800;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -287,10 +290,10 @@
 }
 
 .cta-banner .enquire-btn:hover {
-    transform: scale(1.05);
-    background: white;
-    color: var(--f-secondary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: #eb7125;
+    color: #fff !important;
+    border-color: #eb7125 !important;
+    box-shadow: 0 0 20px rgba(235, 113, 37, 0.4);
 }
 
 @media (max-width: 992px) {

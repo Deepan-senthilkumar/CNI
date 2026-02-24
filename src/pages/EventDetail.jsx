@@ -77,7 +77,7 @@ const EventDetail = () => {
                             color: '#fff'
                         }}>
 
-                            <h1 style={{ fontSize: '3.5rem', fontWeight: '800', margin: '0', color: '#eb7125' }}>{currentEvent.title}</h1>
+                            <h1 style={{ fontSize: '3.5rem', fontWeight: '800', margin: '0', color: '#eb7125', textTransform: 'uppercase', textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)', fontFamily: "'Outfit', sans-serif", letterSpacing: '-1px' }}>{currentEvent.title}</h1>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const EventDetail = () => {
                 <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '3rem' }}>
                     <div className="detail-main">
                         <section style={{ marginBottom: '3rem' }}>
-                            <h2 style={{ fontSize: '2rem', color: '#1e3a8a', marginBottom: '1.5rem', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.5rem' }}>About the Event</h2>
+                            <h2 style={{ fontSize: '2rem', color: '#eb7125', marginBottom: '1.5rem', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.5rem' }}>About the Event</h2>
                             <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: '1.8', marginBottom: '1.5rem' }}>
                                 {currentEvent.description}
                             </p>
@@ -101,9 +101,9 @@ const EventDetail = () => {
                         }}>
                             <h2 style={{
                                 fontSize: '1.8rem',
-                                color: '#1e3a8a',
+                                color: '#eb7125',
                                 marginBottom: '1.5rem',
-                                borderBottom: '2px solid #e2e8f0',
+                                borderBottom: '2px solid #eb7125',
                                 paddingBottom: '0.4rem'
                             }}>Event Registration</h2>
 
@@ -179,20 +179,7 @@ const EventDetail = () => {
                                 </div>
 
                                 <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-                                    <button type="submit" style={{
-                                        background: '#eb7125',
-                                        color: '#fff',
-                                        border: 'none',
-                                        borderRadius: '50px',
-                                        padding: '0.8rem 2.5rem',
-                                        fontSize: '1rem',
-                                        fontWeight: '700',
-                                        cursor: 'pointer',
-                                        transition: 'all 0.3s ease',
-                                        boxShadow: '0 6px 15px rgba(235, 113, 37, 0.2)'
-                                    }}
-                                        onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'}
-                                        onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}>
+                                    <button type="submit" className="cta-button">
                                         Confirm Registration
                                     </button>
                                 </div>
@@ -202,7 +189,7 @@ const EventDetail = () => {
 
                     <div className="detail-sidebar">
                         <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '24px', position: 'sticky', top: '120px', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '1.5rem', color: '#1e3a8a', marginBottom: '1.5rem' }}>Event Details</h3>
+                            <h3 style={{ fontSize: '1.5rem', color: '#eb7125', marginBottom: '1.5rem' }}>Event Details</h3>
 
                             <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                 <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(30, 58, 138, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1e3a8a' }}>
