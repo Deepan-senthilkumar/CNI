@@ -116,7 +116,7 @@ const Chapters = () => {
 
 
     return (
-        <div className="chapters-page" style={{ paddingBottom: '100px' }}>
+        <div className="chapters-page" style={{ paddingBottom: '5px' }}>
             {/* Chapters Hero Section */}
             <section className="chapters-hero-section">
                 <div className="chapters-hero-content">
@@ -166,7 +166,7 @@ const Chapters = () => {
             </section>
 
             {/* Chapters Directory Section */}
-            <section className="chapters-directory-section" style={{ background: '#f8fafc', padding: '60px 0 100px' }}>
+            <section className="chapters-directory-section" style={{ background: '#f8fafc', padding: '60px 0 38px' }}>
                 <div className="container">
                     <div className="section-title" style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--leader-secondary)', position: 'relative', display: 'inline-block' }}>

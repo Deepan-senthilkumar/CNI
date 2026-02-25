@@ -16,6 +16,7 @@ import ChapterDetail from './pages/ChapterDetail';
 import EventDetail from './pages/EventDetail';
 import Membership from './pages/Membership';
 import Franchise from './pages/Franchise';
+import FranchiseInterestForm from './pages/FranchiseInterestForm';
 import Policies from './pages/Policies';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -61,6 +62,7 @@ function App() {
                     <Route path="/cni-leaders" element={<CNILeaders />} />
                     <Route path="/chapters" element={<Chapters />} />
                     <Route path="/franchise" element={<Franchise />} />
+                    <Route path="/franchise-interest-form" element={<FranchiseInterestForm />} />
                     <Route path="/policies" element={<Policies />} />
                     <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />

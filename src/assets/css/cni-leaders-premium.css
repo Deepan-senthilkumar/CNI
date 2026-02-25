@@ -891,25 +891,49 @@
 }
 
 /* 9. Chapter Directory Grid and Cards - Vibrant Redesign */
+.chapters-directory-section .container {
+    max-width: 1450px;
+    /* Increased from 1200px to make grid wider */
+}
+
 .chapters-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    /* Reduced gap slightly to fit more width */
     margin-top: 3rem;
     padding: 0 2rem;
 }
 
+@media (max-width: 1200px) {
+    .chapters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .chapters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .chapters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .chapter-card-premium {
     position: relative;
-    height: 250px;
-    border-radius: 28px;
-    /* Slightly rounder for a softer look */
+    height: 200px;
+    /* Reduced from 250px */
+    border-radius: 20px;
+    /* Slightly reduced radius for better fit */
     overflow: hidden;
     cursor: pointer;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     border: none !important;
-    /* Removed the visible edge/border line */
 }
 
 .chapter-overlay-new {
@@ -974,7 +998,7 @@
     font-weight: 800 !important;
     line-height: 1.2 !important;
     margin: 0 !important;
-    color: var(--leader-secondary) !important;
+    color: #fff !important;
     /* Orange for better premium contrast */
     font-family: 'Outfit', sans-serif;
     letter-spacing: 0.5px;
@@ -983,13 +1007,15 @@
 }
 
 .chapter-details p {
-    font-size: 0.8rem !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.85rem !important;
+    /* Slightly increased size to emphasize boldness */
+    color: #ffffff !important;
     margin: 0 !important;
-    font-weight: 700 !important;
+    font-weight: 900 !important;
+    /* Increased from 700 to 900 */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
 }
 
@@ -1039,7 +1065,13 @@
 
 @media (max-width: 1200px) {
     .chapter-card-premium {
-        height: 320px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chapter-card-premium {
+        height: 160px;
     }
 }
 
