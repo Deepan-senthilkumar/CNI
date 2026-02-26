@@ -139,14 +139,57 @@ nav {
 }
 
 .nav-links a {
+    font-weight: 800;
+
     font-weight: 500;
     font-size: 1.0rem;
     color: #eb7125;
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-links a.nav-contact-btn {
+    background: var(--secondary-color);
+    color: #fff !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--secondary-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links a.nav-contact-btn:hover {
+    background: transparent;
+    color: var(--secondary-color) !important;
+    box-shadow: 0 4px 15px rgba(235, 113, 37, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-links a.nav-contact-btn.active {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .nav-links a.nav-contact-btn {
+        margin-top: 0.5rem;
+        padding: 0.8rem 2rem;
+        width: auto;
+        min-width: 180px;
+    }
 }
 
 /* Dropdown Menu Styles */
@@ -997,7 +1040,8 @@ nav {
     line-height: 1.8;
     color: #b0b0b0;
     margin-bottom: 2.5rem;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .social-strip-v2 {

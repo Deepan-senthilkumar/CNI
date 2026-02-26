@@ -104,16 +104,6 @@ const Contact = () => {
                                         </div>
                                     </div>
                                 </div>
-
-                                <div className="social-connect-box">
-                                    <h4>Follow Our Growth</h4>
-                                    <div className="social-circles">
-                                        <a href="#" className="sc-icon"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="#" className="sc-icon"><i className="fab fa-instagram"></i></a>
-                                        <a href="#" className="sc-icon"><i className="fab fa-linkedin-in"></i></a>
-                                        <a href="#" className="sc-icon"><i className="fab fa-youtube"></i></a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 

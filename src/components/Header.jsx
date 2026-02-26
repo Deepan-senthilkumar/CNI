@@ -49,7 +49,7 @@ const Header = () => {
                                 <li><a href="https://www.promptdigimart.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>DIGI MART</a></li>
                             </ul>
                         </li>
-                        <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
+                        <li><Link to="/contact" className={`nav-contact-btn ${location.pathname.startsWith('/contact') ? 'active' : ''}`} onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>Contact Us</Link></li>
                     </ul>
                 </nav>
             </div>
