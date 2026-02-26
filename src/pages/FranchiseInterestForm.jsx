@@ -239,6 +239,19 @@ const FranchiseInterestForm = () => {
                             <div className="form-group full-width">
                                 <label>Remarks</label>
                                 <textarea rows="3" placeholder="Approval status or internal notes"></textarea>
+                                <input type="text" placeholder="Internal Use" readOnly />
+                            </div>
+                            <div className="form-group">
+                                <label>Date Received</label>
+                                <input type="text" placeholder="DD/MM/YYYY" readOnly />
+                            </div>
+                            <div className="form-group">
+                                <label>Reviewed By</label>
+                                <input type="text" placeholder="Officer Name" readOnly />
+                            </div>
+                            <div className="form-group full-width">
+                                <label>Remarks</label>
+                                <textarea rows="3" placeholder="Approval status or internal notes" readOnly></textarea>
                             </div>
                         </div>
                     </div>

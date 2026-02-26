@@ -140,6 +140,8 @@ nav {
 
 .nav-links a {
     font-weight: 800;
+
+    font-weight: 500;
     font-size: 1.0rem;
     color: #eb7125;
     transition: all 0.3s ease;
