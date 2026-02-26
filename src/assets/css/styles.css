@@ -105,7 +105,7 @@ header {
     width: 90%;
     max-width: 1200px;
     z-index: 1000;
-    background: rgb(255 255 255 / 34%);
+    background: rgba(255, 255, 255, 0.909);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--glass-border);
@@ -139,14 +139,55 @@ nav {
 }
 
 .nav-links a {
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: var(--text-color);
+    font-weight: 800;
+    font-size: 1.0rem;
+    color: #eb7125;
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-links a.nav-contact-btn {
+    background: var(--secondary-color);
+    color: #fff !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--secondary-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links a.nav-contact-btn:hover {
+    background: transparent;
+    color: var(--secondary-color) !important;
+    box-shadow: 0 4px 15px rgba(235, 113, 37, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-links a.nav-contact-btn.active {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .nav-links a.nav-contact-btn {
+        margin-top: 0.5rem;
+        padding: 0.8rem 2rem;
+        width: auto;
+        min-width: 180px;
+    }
 }
 
 /* Dropdown Menu Styles */
@@ -983,6 +1024,7 @@ nav {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
     gap: 3rem;
+    align-items: start;
 }
 
 .footer-brand-v2 .footer-logo-v2 {
@@ -996,7 +1038,8 @@ nav {
     line-height: 1.8;
     color: #b0b0b0;
     margin-bottom: 2.5rem;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .social-strip-v2 {
@@ -1113,29 +1156,66 @@ nav {
     }
 }
 
-@media (max-width: 600px) {
-    .footer-content {
+@media (max-width: 768px) {
+    .footer-v2 .container {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-brand-v2,
+    .footer-col-v2 {
         text-align: center;
     }
 
-    .footer-brand h2,
-    .footer-col h3 {
+    .footer-brand-v2 .footer-logo-v2,
+    .footer-brand-v2 a {
+        display: flex !important;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-brand-v2 p,
+    .contact-details-v2 p {
         text-align: center;
     }
 
-    .footer-about {
-        max-width: 100%;
+    .footer-col-v2 h3 {
+        text-align: center;
     }
 
-    .footer-socials {
+    .footer-col-v2 h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-strip-v2 {
         justify-content: center;
     }
 
-    .footer-bottom-content {
+    .footer-links-v2 {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .footer-links-v2 a {
+        justify-content: flex-start;
+    }
+
+    .contact-box-v2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom-v2 .container {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+
+    .footer-bottom-v2 p {
+        justify-content: center;
+        text-align: center !important;
     }
 }
 

@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/css/franchise-premium.css';
 
 const Franchise = () => {
+    const navigate = useNavigate();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -13,6 +16,7 @@ const Franchise = () => {
                 <div className="container">
                     <h1>Become a CNI Franchise Partner</h1>
                     <p>India’s ONLY construction-focused networking business forum is expanding. Join a proven leadership network that drives ₹3,500+ Cr in referrals.</p>
+                    <button className="interest-form-btn" onClick={() => navigate('/franchise-interest-form')}>Interest Form</button>
                 </div>
             </section>
 

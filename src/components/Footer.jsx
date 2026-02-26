@@ -11,9 +11,7 @@ const Footer = () => {
                         <Link to="/" style={{ display: 'block', marginBottom: '1.5rem' }}>
                             <img src={footerLogo} alt="CNI Business Forum" style={{ maxWidth: '140px', height: 'auto' }} />
                         </Link>
-                        <p>CNI Business Forum is India's most reputable business networking platform, connecting innovators and
-                            leaders. We provide a wide range of services, including business development, networking events,
-                            professional training, and collaborative growth modules.</p>
+                        <p>CNI Business Forum is an initiative managed and operated by PROMPT TRADE FAIRS (INDIA) PRIVATE LIMITED, a registered company under the Companies Act, Government of India.</p>
                         <div className="social-strip-v2">
                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                             <a href="#"><i className="fab fa-instagram"></i></a>
@@ -91,7 +89,7 @@ const Footer = () => {
                         <p style={{ flex: 1, textAlign: 'center', margin: 0, color: '#fff' }}>© 2026 CNI Business Forum. All rights reserved.</p>
 
                         <p style={{ flex: 1, textAlign: 'right', margin: 0, color: '#fff' }}>Designed by <span
-                            style={{ color: '#eb7125' }}><a href="https://www.oceansoftwares.com"
+                            style={{ color: '#eb7125' }}><a href="https://www.oceansoftwares.com" target="_blank" rel="noopener noreferrer"
                                 style={{ color: 'inherit', transition: 'color 0.3s' }}> Ocean Softwares</a></span></p>
                     </div>
                 </div>
